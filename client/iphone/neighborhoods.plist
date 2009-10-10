@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>lat</key>
+		<real>37.7764277135228</real>
+		<key>lon</key>
+		<real>-122.43403034020299</real>
+		<key>name</key>
+		<string>Alamo Square</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7811799112594</real>
+		<key>lon</key>
+		<real>-122.443458058609</real>
+		<key>name</key>
+		<string>Anza Vista</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7307150742731</real>
+		<key>lon</key>
+		<real>-122.46805636867199</real>
+		<key>name</key>
+		<string>Balboa Terrace</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.729262282930897</real>
+		<key>lon</key>
+		<real>-122.391233998095</real>
+		<key>name</key>
+		<string>Bayview District</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7161043620969</real>
+		<key>lon</key>
+		<real>-122.391352945704</real>
+		<key>name</key>
+		<string>Bayview Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7444004212606</real>
+		<key>lon</key>
+		<real>-122.413335679727</real>
+		<key>name</key>
+		<string>Bernal Heights North</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.736795013653001</real>
+		<key>lon</key>
+		<real>-122.421427125102</real>
+		<key>name</key>
+		<string>Bernal Heights South</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.768257484317203</real>
+		<key>lon</key>
+		<real>-122.440852820758</real>
+		<key>name</key>
+		<string>Buena Vista Park</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.778227959185799</real>
+		<key>lon</key>
+		<real>-122.482193426818</real>
+		<key>name</key>
+		<string>Richmond, Central</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.758486745060701</real>
+		<key>lon</key>
+		<real>-122.486234782504</real>
+		<key>name</key>
+		<string>Sunset, Central</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.758372162708298</real>
+		<key>lon</key>
+		<real>-122.449308500383</real>
+		<key>name</key>
+		<string>Clarendon Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.763052734794698</real>
+		<key>lon</key>
+		<real>-122.441252986941</real>
+		<key>name</key>
+		<string>Corona Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.798487518857101</real>
+		<key>lon</key>
+		<real>-122.43580103601801</real>
+		<key>name</key>
+		<string>Cow Hollow</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.712332987822599</real>
+		<key>lon</key>
+		<real>-122.439741729158</real>
+		<key>name</key>
+		<string>Crocker Amazon</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.740930647128799</real>
+		<key>lon</key>
+		<real>-122.443829214826</real>
+		<key>name</key>
+		<string>Diamond Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.786268052774403</real>
+		<key>lon</key>
+		<real>-122.413386284061</real>
+		<key>name</key>
+		<string>Downtown/Tenderloin</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.766384408716704</real>
+		<key>lon</key>
+		<real>-122.43138615203399</real>
+		<key>name</key>
+		<string>Duboce Triangle</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.760778653027899</real>
+		<key>lon</key>
+		<real>-122.433909705457</real>
+		<key>name</key>
+		<string>Eureka Valley / Dolores Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.721058601126202</real>
+		<key>lon</key>
+		<real>-122.429102924975</real>
+		<key>name</key>
+		<string>Excelsior</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.792694014362901</real>
+		<key>lon</key>
+		<real>-122.40083959045501</real>
+		<key>name</key>
+		<string>Financial District North</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.784737393626799</real>
+		<key>lon</key>
+		<real>-122.399262686432</real>
+		<key>name</key>
+		<string>Financial District South</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.748090315488398</real>
+		<key>lon</key>
+		<real>-122.46495553600199</real>
+		<key>name</key>
+		<string>Forest Hill</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.744010972628303</real>
+		<key>lon</key>
+		<real>-122.457523723812</real>
+		<key>name</key>
+		<string>Forest Hills Extension</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.757396678557598</real>
+		<key>lon</key>
+		<real>-122.457941351787</real>
+		<key>name</key>
+		<string>Forest Knolls</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.737706503987503</real>
+		<key>lon</key>
+		<real>-122.431694376557</real>
+		<key>name</key>
+		<string>Glen Park</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.753063479045601</real>
+		<key>lon</key>
+		<real>-122.47009681071501</real>
+		<key>name</key>
+		<string>Golden Gate Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.769318185156699</real>
+		<key>lon</key>
+		<real>-122.483115219597</real>
+		<key>name</key>
+		<string>Golden Gate Park</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.768642629669998</real>
+		<key>lon</key>
+		<real>-122.447401039683</real>
+		<key>name</key>
+		<string>Haight Ashbury</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.773906312865499</real>
+		<key>lon</key>
+		<real>-122.429938297961</real>
+		<key>name</key>
+		<string>Hayes Valley</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.729979698683003</real>
+		<key>lon</key>
+		<real>-122.372918804286</real>
+		<key>name</key>
+		<string>Hunters Point</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.720631411782001</real>
+		<key>lon</key>
+		<real>-122.453097592285</real>
+		<key>name</key>
+		<string>Ingleside</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.713138724549196</real>
+		<key>lon</key>
+		<real>-122.467720235662</real>
+		<key>name</key>
+		<string>Ingleside Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.726312880612902</real>
+		<key>lon</key>
+		<real>-122.467048727787</real>
+		<key>name</key>
+		<string>Ingleside Terrace</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.754929711882198</real>
+		<key>lon</key>
+		<real>-122.413515098582</real>
+		<key>name</key>
+		<string>Mission, Inner</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.744911709680601</real>
+		<key>lon</key>
+		<real>-122.473533867714</real>
+		<key>name</key>
+		<string>Parkside, Inner</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.778985734253801</real>
+		<key>lon</key>
+		<real>-122.465557120626</real>
+		<key>name</key>
+		<string>Richmond, Inner</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.759312406666503</real>
+		<key>lon</key>
+		<real>-122.46746416952401</real>
+		<key>name</key>
+		<string>Sunset, Inner</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.784278547782598</real>
+		<key>lon</key>
+		<real>-122.452681998052</real>
+		<key>name</key>
+		<string>Laurel Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.786319734377997</real>
+		<key>lon</key>
+		<real>-122.473422998635</real>
+		<key>name</key>
+		<string>Lake</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7216900837862</real>
+		<key>lon</key>
+		<real>-122.489920622395</real>
+		<key>name</key>
+		<string>Lake Shore</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.726005925965303</real>
+		<key>lon</key>
+		<real>-122.473751778447</real>
+		<key>name</key>
+		<string>Lakeside</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.778370017742098</real>
+		<key>lon</key>
+		<real>-122.452841359194</real>
+		<key>name</key>
+		<string>Lone Mountain</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.786324590511903</real>
+		<key>lon</key>
+		<real>-122.435862679094</real>
+		<key>name</key>
+		<string>Pacific Heights, Lower</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.804868935164301</real>
+		<key>lon</key>
+		<real>-122.43651342846999</real>
+		<key>name</key>
+		<string>Marina</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7197768285153</real>
+		<key>lon</key>
+		<real>-122.467113418461</real>
+		<key>name</key>
+		<string>Merced Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.732918591635098</real>
+		<key>lon</key>
+		<real>-122.478918766584</real>
+		<key>name</key>
+		<string>Merced Manor</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.751279674798198</real>
+		<key>lon</key>
+		<real>-122.45320387671001</real>
+		<key>name</key>
+		<string>Midtown Terrace</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.739645756073202</real>
+		<key>lon</key>
+		<real>-122.451162866328</real>
+		<key>name</key>
+		<string>Miraloma Park</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7730096901591</real>
+		<key>lon</key>
+		<real>-122.394084641804</real>
+		<key>name</key>
+		<string>Mission Bay</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.764975657117802</real>
+		<key>lon</key>
+		<real>-122.42510716229999</real>
+		<key>name</key>
+		<string>Mission Dolores</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.724343344580603</real>
+		<key>lon</key>
+		<real>-122.437551760004</real>
+		<key>name</key>
+		<string>Mission Terrace</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.733498281746201</real>
+		<key>lon</key>
+		<real>-122.462112662728</real>
+		<key>name</key>
+		<string>Monterey Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.728198508569797</real>
+		<key>lon</key>
+		<real>-122.46350875594599</real>
+		<key>name</key>
+		<string>Mount Davidson Manor</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.794002758680001</real>
+		<key>lon</key>
+		<real>-122.415422683614</real>
+		<key>name</key>
+		<string>Nob Hill</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.748385521331201</real>
+		<key>lon</key>
+		<real>-122.43349208407299</real>
+		<key>name</key>
+		<string>Noe Valley</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.801613299408203</real>
+		<key>lon</key>
+		<real>-122.413027514348</real>
+		<key>name</key>
+		<string>North Beach</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.775632213832502</real>
+		<key>lon</key>
+		<real>-122.446197588045</real>
+		<key>name</key>
+		<string>Panhandle, North</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.805057318151398</real>
+		<key>lon</key>
+		<real>-122.409162532382</real>
+		<key>name</key>
+		<string>North Waterfront</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.713193666368802</real>
+		<key>lon</key>
+		<real>-122.456602441437</real>
+		<key>name</key>
+		<string>Oceanview</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.714445278431597</real>
+		<key>lon</key>
+		<real>-122.45025343035</real>
+		<key>name</key>
+		<string>Mission, Outer</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.742504374658601</real>
+		<key>lon</key>
+		<real>-122.50219119655701</real>
+		<key>name</key>
+		<string>Parkside, Outer</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.779923277609299</real>
+		<key>lon</key>
+		<real>-122.503378236911</real>
+		<key>name</key>
+		<string>Richmond, Outer</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.757735096942</real>
+		<key>lon</key>
+		<real>-122.503832741384</real>
+		<key>name</key>
+		<string>Sunset, Outer</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.792807932958802</real>
+		<key>lon</key>
+		<real>-122.43496525014299</real>
+		<key>name</key>
+		<string>Pacific Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.742989850187598</real>
+		<key>lon</key>
+		<real>-122.485275100642</real>
+		<key>name</key>
+		<string>Parkside</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.763709891064103</real>
+		<key>lon</key>
+		<real>-122.450142960237</real>
+		<key>name</key>
+		<string>Parnassus / Ashbury Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7359939152918</real>
+		<key>lon</key>
+		<real>-122.483427333704</real>
+		<key>name</key>
+		<string>Pine Lake Park</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.727297869978202</real>
+		<key>lon</key>
+		<real>-122.412484528025</real>
+		<key>name</key>
+		<string>Portola</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.757350145932499</real>
+		<key>lon</key>
+		<real>-122.391072242668</real>
+		<key>name</key>
+		<string>Potrero Hill</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.798987698129203</real>
+		<key>lon</key>
+		<real>-122.46622692010401</real>
+		<key>name</key>
+		<string>Presidio</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7887154107013</real>
+		<key>lon</key>
+		<real>-122.455258520687</real>
+		<key>name</key>
+		<string>Presidio Heights</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.801947788066002</real>
+		<key>lon</key>
+		<real>-122.418745388064</real>
+		<key>name</key>
+		<string>Russian Hill</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.736803811368198</real>
+		<key>lon</key>
+		<real>-122.465648348149</real>
+		<key>name</key>
+		<string>Saint Francis Wood</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.787114472727602</real>
+		<key>lon</key>
+		<real>-122.488323448201</real>
+		<key>name</key>
+		<string>Sea Cliff</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.737437742164403</real>
+		<key>lon</key>
+		<real>-122.457205256489</real>
+		<key>name</key>
+		<string>Sherwood Forest</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.733388589597702</real>
+		<key>lon</key>
+		<real>-122.399491227973</real>
+		<key>name</key>
+		<string>Silver Terrace</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.786564429549003</real>
+		<key>lon</key>
+		<real>-122.39040589415799</real>
+		<key>name</key>
+		<string>South Beach</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.775391681766799</real>
+		<key>lon</key>
+		<real>-122.412214307049</real>
+		<key>name</key>
+		<string>South of Market</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7210717103967</real>
+		<key>lon</key>
+		<real>-122.47821760298</real>
+		<key>name</key>
+		<string>Stonestown</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.7294689973549</real>
+		<key>lon</key>
+		<real>-122.442125118139</real>
+		<key>name</key>
+		<string>Sunnyside</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.802024062300902</real>
+		<key>lon</key>
+		<real>-122.40639524722999</real>
+		<key>name</key>
+		<string>Telegraph Hill</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.752992213798201</real>
+		<key>lon</key>
+		<real>-122.444897407502</real>
+		<key>name</key>
+		<string>Twin Peaks</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.781524275771403</real>
+		<key>lon</key>
+		<real>-122.41841701757799</real>
+		<key>name</key>
+		<string>Van Ness/Civic Center</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.716229215335098</real>
+		<key>lon</key>
+		<real>-122.41031331964101</real>
+		<key>name</key>
+		<string>Visitacion Valley</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.739333064708099</real>
+		<key>lon</key>
+		<real>-122.467412351734</real>
+		<key>name</key>
+		<string>West Portal</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.781110866423603</real>
+		<key>lon</key>
+		<real>-122.43156975044499</real>
+		<key>name</key>
+		<string>Western Addition</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.734204752169099</real>
+		<key>lon</key>
+		<real>-122.4550021851</real>
+		<key>name</key>
+		<string>Westwood Highlands</string>
+	</dict>
+	<dict>
+		<key>lat</key>
+		<real>37.727321232487597</real>
+		<key>lon</key>
+		<real>-122.456286668018</real>
+		<key>name</key>
+		<string>Westwood Park</string>
+	</dict>
+</array>
+</plist>
