@@ -10,23 +10,51 @@
 
 @implementation MainMenuViewController
 
-- (void) awakeFromNib{
+@synthesize cVC;
+
+
+- (IBAction) showCredits
+{
+    [[[self navigationController] view] setBackgroundColor:[UIColor blackColor]];
+     
+    [self setCVC:[[CreditsViewController alloc] initWithNibName:@"CreditsViewController" bundle:[NSBundle mainBundle]]];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.75];
+    [UIView setAnimationBeginsFromCurrentState:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view.superview cache:YES];
     
-	CLLocationManager * locationManager = [[CLLocationManager alloc] init];
-	// check if the hardware has a compass
-	if ([locationManager headingAvailable]) {
-        UIBarButtonItem * newButton = [[UIBarButtonItem alloc] initWithTitle:@"AR View" style:UIBarButtonItemStyleBordered target:self action:@selector(goAugmented)];
-//        UIBarButtonItem * newButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButton target:self action:@selector(goAugmented)];
-        [[self navigationItem] setRightBarButtonItem:newButton];
-        [newButton release];
-    }
-    [locationManager release];
+    UIView *parent = self.view.superview;
+    //[self.view removeFromSuperview];
+    
+    [parent addSubview:[cVC view]];
+    [[cVC backHomeButton] addTarget:self action:@selector(hideCredits) forControlEvents:UIControlEventTouchUpInside];
+    
+    [UIView commitAnimations];
+    
 }
 
-- (IBAction) goNeighborhoodPicker {
+- (IBAction) hideCredits {
+
     
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.75];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:[[[self cVC] view] superview] cache:YES];
+    
+    UIView *parent = self.view.superview;
+    [[cVC view] removeFromSuperview];
+    [parent addSubview:[self view]];
+    
+    [UIView commitAnimations];
+    
+}
+
+
+
+- (IBAction) goNeighborhoodPicker {
     NeighborhoodPickerViewControler * npVC = [[NeighborhoodPickerViewControler alloc] initWithStyle:UITableViewStylePlain];
     [[self navigationController] pushViewController:npVC animated:YES];
+    [[self navigationController] setNavigationBarHidden:NO];    
     [npVC release];
 }
 
@@ -76,6 +104,21 @@
     [arVC release];
     [dataSource release];
     
+}
+
+-(void) viewDidLoad {
+	CLLocationManager * locationManager = [[CLLocationManager alloc] init];
+	// check if the hardware has a compass
+	if ([locationManager headingAvailable]) {
+        [augmentedButtonOverlay removeFromSuperview];
+        [goAugmentedButton setEnabled:YES];
+    }
+    [locationManager release];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [[self navigationController] setNavigationBarHidden:YES];
+
 }
 
 -(void) didCancel {
