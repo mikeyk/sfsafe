@@ -5,7 +5,7 @@
 //  Created by Mike Krieger on 8/30/09.
 //  Copyright Mike Krieger 2009. All rights reserved.
 //
-
+#include <SystemConfiguration/SCNetworkReachability.h>
 #import "sfinfoAppDelegate.h"
 
 @implementation sfinfoAppDelegate
@@ -16,10 +16,22 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
+
+    // MxWeas' quick reachability sample
+    
+    SCNetworkReachabilityRef reach = SCNetworkReachabilityCreateWithName(kCFAllocatorSystemDefault, "mikekrooog.com"); // Attempt to ping google.com
+    SCNetworkConnectionFlags flags;
+    SCNetworkReachabilityGetFlags(reach, &flags); // Store reachability flags in the variable, flags.
+    
+    if(!(kSCNetworkReachabilityFlagsReachable & flags)) {
+        UIAlertView * connectionAlert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"This app requires an Internet connection, but we couldn't detect one. Please turn off Airplane Mode or connect to a valid network."  delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        [connectionAlert show];
+    }
+    
     // the Navigation bar has previously been created in IB
     [window addSubview:[navigationController view]];
     [[navigationController navigationBar] setTintColor:[UIColor grayColor]];
-    [navigationController setTitle:@"SFSafe"];
+    [navigationController setTitle:@"Crime Desk SF"];
     [window makeKeyAndVisible];
 
 }
