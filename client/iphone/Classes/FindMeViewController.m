@@ -65,7 +65,7 @@
                 coord.latitude = CITYCENTERLAT;
                 coord.longitude = CITYCENTERLON;
             } else{
-                [delegate performSelector:onError withObject:@"It doesn't look like you're in SF, and this features requires an SF location to work."];
+                [delegate performSelector:onError withObject:@"It doesn't look like you're in SF, and this feature requires an SF location to work."];
                 return;
             }
         } 
