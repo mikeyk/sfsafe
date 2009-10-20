@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="8"/>
+			<integer value="6"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -49,8 +49,8 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIBarButtonItem" id="551635131">
-								<string key="IBUITitle">Filter</string>
+							<object class="IBUIBarButtonItem" id="154440184">
+								<string key="IBUITitle">Back</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="957665738"/>
 							</object>
@@ -58,6 +58,11 @@
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="957665738"/>
 								<int key="IBUISystemItemIdentifier">5</int>
+							</object>
+							<object class="IBUIBarButtonItem" id="551635131">
+								<string key="IBUITitle">Filter</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="957665738"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="322397829">
 								<int key="IBUIStyle">1</int>
@@ -86,21 +91,10 @@
 						<int key="NSvFlags">-2147483356</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIActivityIndicatorView" id="394667841">
+							<object class="IBUILabel" id="753259115">
 								<reference key="NSNextResponder" ref="878672864"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{21, 9}, {20, 20}}</string>
-								<reference key="NSSuperview" ref="878672864"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-							</object>
-							<object class="IBUILabel" id="778543491">
-								<reference key="NSNextResponder" ref="878672864"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{48, 9}, {91, 21}}</string>
+								<string key="NSFrame">{{36, 11}, {91, 21}}</string>
 								<reference key="NSSuperview" ref="878672864"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -121,8 +115,19 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
+							<object class="IBUIActivityIndicatorView" id="726848283">
+								<reference key="NSNextResponder" ref="878672864"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{9, 11}, {20, 20}}</string>
+								<reference key="NSSuperview" ref="878672864"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<bool key="IBUIHidesWhenStopped">NO</bool>
+								<bool key="IBUIAnimating">YES</bool>
+							</object>
 						</object>
-						<string key="NSFrame">{{0, 338}, {320, 39}}</string>
+						<string key="NSFrame">{{179, 378}, {142, 39}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -130,6 +135,7 @@
 							<reference key="NSCustomColorSpace" ref="135471460"/>
 						</object>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<float key="IBUIAlpha">0.80985915660858154</float>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -193,6 +199,14 @@
 					</object>
 					<int key="connectionID">29</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">goHome</string>
+						<reference key="source" ref="154440184"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -230,10 +244,11 @@
 						<reference key="object" ref="957665738"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="551635131"/>
 							<reference ref="322397829"/>
 							<reference ref="268692527"/>
 							<reference ref="551291062"/>
+							<reference ref="154440184"/>
+							<reference ref="551635131"/>
 						</object>
 						<reference key="parent" ref="774585933"/>
 					</object>
@@ -258,29 +273,34 @@
 						<reference key="parent" ref="957665738"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">27</int>
+						<reference key="object" ref="551291062"/>
+						<reference key="parent" ref="957665738"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">30</int>
+						<reference key="object" ref="154440184"/>
+						<reference key="parent" ref="957665738"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
 						<reference key="object" ref="878672864"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="394667841"/>
-							<reference ref="778543491"/>
+							<reference ref="726848283"/>
+							<reference ref="753259115"/>
 						</object>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">24</int>
-						<reference key="object" ref="394667841"/>
+						<int key="objectID">32</int>
+						<reference key="object" ref="726848283"/>
 						<reference key="parent" ref="878672864"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">25</int>
-						<reference key="object" ref="778543491"/>
+						<int key="objectID">34</int>
+						<reference key="object" ref="753259115"/>
 						<reference key="parent" ref="878672864"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">27</int>
-						<reference key="object" ref="551291062"/>
-						<reference key="parent" ref="957665738"/>
 					</object>
 				</object>
 			</object>
@@ -295,9 +315,10 @@
 					<string>14.IBPluginDependency</string>
 					<string>19.IBPluginDependency</string>
 					<string>23.IBPluginDependency</string>
-					<string>24.IBPluginDependency</string>
-					<string>25.IBPluginDependency</string>
 					<string>27.IBPluginDependency</string>
+					<string>30.IBPluginDependency</string>
+					<string>32.IBPluginDependency</string>
+					<string>34.IBPluginDependency</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -314,7 +335,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{438, 347}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{282, 272}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -335,7 +357,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">34</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -347,7 +369,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>goAugmented</string>
+							<string>goHome</string>
 							<string>recenterResults</string>
 							<string>showFilterOptions</string>
 							<string>showShareMenu</string>
