@@ -26,6 +26,22 @@
 @synthesize dataSource;
 @synthesize message;
 
+- (void) showMessage:(NSString *) messageText {
+    UIView * message_ = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    [message_ setBackgroundColor:[UIColor colorWithWhite:0.250 alpha:1.000]];
+    UILabel * messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 310, 20)];
+    [messageLabel setBackgroundColor:[UIColor clearColor]];
+    [message_ setAlpha:0.75];
+    [messageLabel setTextColor:[UIColor whiteColor]];
+    [messageLabel setAdjustsFontSizeToFitWidth:YES];
+    [messageLabel setText:messageText];
+    [message_ addSubview:messageLabel];
+    [self setMessage:message_];
+    [[self view] addSubview:message];
+    [messageLabel release];
+    [message_ release];
+}
+
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil 
                                                 mapCenter:(CLLocationCoordinate2D)center 
@@ -35,17 +51,9 @@
         [self setDataSource: dataSource_];
         [dataSource setDelegate:self];
         if(fabs(CITYCENTERLAT - center.latitude) < 0.00001 && fabs(CITYCENTERLON - center.longitude) < 0.0001) {
-            UIView * message_ = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-            [message_ setBackgroundColor:[UIColor colorWithWhite:0.250 alpha:1.000]];
-            UILabel * messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 310, 20)];
-            [messageLabel setBackgroundColor:[UIColor clearColor]];
-            [message_ setAlpha:0.75];
-            [messageLabel setTextColor:[UIColor whiteColor]];
-            [messageLabel setAdjustsFontSizeToFitWidth:YES];
-            [messageLabel setText:@"We placed you in the center of San Francisco"];
-            [message_ addSubview:messageLabel];
-            [self setMessage:message_];
-            [[self view] addSubview:message];
+            [self showMessage:@"We placed you in the center of San Francisco"];
+        } else if (![dataSource fetchesMoreResults]) {
+            [self showMessage:@"Touch Back to see a different neighborhood"];
         }
     }
     return self;
@@ -104,23 +112,28 @@
 /* on map move, if we have an active timer, reset it; otherwise,
     start a timer for 1 second from now */
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    
     [message setHidden:YES];
-    if ([self refreshRateLimiter] == nil) {
-        [self setRefreshRateLimiter:[NSTimer 
-                                        scheduledTimerWithTimeInterval:1.00 
-                                        target:self 
-                                        selector:@selector(recenterResults) 
-                                        userInfo:nil 
-                                        repeats:NO]];
-    } else {
-        [[self refreshRateLimiter] invalidate];
-        [self setRefreshRateLimiter:[NSTimer 
-                                        scheduledTimerWithTimeInterval:1.00 
-                                     	target:self 
-                                        selector:@selector(recenterResults) 
-                                        userInfo:nil 
-                                        repeats:NO]];
-
+    // don't trigger a refresh on an animated move,
+    // because it means the user just tapped on an icon
+    if (!animated) {
+        if ([self refreshRateLimiter] == nil) {
+            [self setRefreshRateLimiter:[NSTimer 
+                                            scheduledTimerWithTimeInterval:1.00 
+                                            target:self 
+                                            selector:@selector(recenterResults) 
+                                            userInfo:nil 
+                                            repeats:NO]];
+        } else {
+            [[self refreshRateLimiter] invalidate];
+            [self setRefreshRateLimiter:[NSTimer 
+                                            scheduledTimerWithTimeInterval:1.00 
+                                            target:self 
+                                            selector:@selector(recenterResults) 
+                                            userInfo:nil 
+                                            repeats:NO]];
+        }
+        
     }
 
 }
@@ -150,9 +163,25 @@
     }
     
     [mainMapView removeAnnotations:[mainMapView annotations]];
+    NSMutableDictionary * hashedLocations = [NSMutableDictionary dictionaryWithCapacity:100];
     NSArray * lastResultList = [dataSource locations];
     for (InfoLocation * infoloc in lastResultList) {
-        [mainMapView addAnnotation:infoloc];
+        InfoLocation * infoLocCopy = [[InfoLocation alloc] initWithInfoLocation:infoloc];
+        CLLocationCoordinate2D coord = [infoloc coordinate];
+        NSString * hash = [NSString stringWithFormat:@"%.5f-%.5f", coord.latitude, coord.longitude];
+        if (![hashedLocations objectForKey:hash]) {
+            [hashedLocations setValue:[NSNumber numberWithInt:1] forKey:hash];    
+        } else {
+            // offset a bit so we don't have a bunch of clustered ones
+            int interval = [[infoLocCopy timestamp] timeIntervalSince1970];
+            float latoffset = ((interval % 128) / 64.0) - 1;
+            float lonoffset = ((interval % 142) / 71.0) - 1;
+            coord.latitude += latoffset / 1300.0;
+            coord.longitude += lonoffset / 1300.0;
+            [infoLocCopy setCoordinate:coord];            
+        }
+        [mainMapView addAnnotation:infoLocCopy];
+        [infoLocCopy release];
         
     }
 
@@ -178,6 +207,10 @@
     [mainMapView setDelegate:self];
     [self fetchAndDisplayResultsForCoordinates:region force:YES];
         
+}
+
+- (IBAction) goHome {
+    [[self navigationController] popViewControllerAnimated:YES];
 }
 
 - (IBAction) toggleMapType {

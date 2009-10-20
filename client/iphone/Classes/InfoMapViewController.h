@@ -40,6 +40,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil mapCenter:(CLLocationCoordinate2D)center dataSource:(id<InfoLocationDataSource>) dataSource;
 
+- (IBAction) goHome;
 - (IBAction) recenterResults;
 - (IBAction) showFilterOptions;
 - (IBAction) toggleMapType;
