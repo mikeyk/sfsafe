@@ -23,19 +23,17 @@
 	return self.category;
 }
 
+-(id) initWithInfoLocation:(InfoLocation *) original {
+    coordinate = [original coordinate];
+    [self setDescription:[original description]];
+    [self setCategory:[original category]];
+    [self setShortName:[original shortName]];
+    [self setTimestamp:[original timestamp]];
+    return self;
+}
+
 -(id)initWithCoordinate:(CLLocationCoordinate2D) c info:(NSDictionary*) info{
-    /* Image credits
-     
-        assault: http://www.flickr.com/photos/szuppo/
-        robbery: http://www.flickr.com/photos/nirmalthacker/
-        larceny: http://www.flickr.com/photos/amagill/
-        vehicle-theft: Wikipedia
-        vandalism: http://www.flickr.com/photos/lifeontheedge/
-        burglary: 
-        
-     
-     
-     */
+
 	coordinate=c;
     [self setDescription:[info valueForKey:@"description"]];
     [self setCategory: [info valueForKey:@"category"]];

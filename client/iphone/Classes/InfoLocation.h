@@ -18,13 +18,14 @@
     NSString * shortName;
 }
 
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
 @property (nonatomic, retain) NSString * description;
 @property (nonatomic, retain) NSString * category;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSString * shortName;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D) coordinate info:(NSDictionary *) info;
+-(id) initWithInfoLocation:(InfoLocation *) original;
 
 - (NSString *)subtitle;
 - (NSString *)title;
