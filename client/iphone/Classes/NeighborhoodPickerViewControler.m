@@ -68,32 +68,16 @@
         NSArray *sortedSection = [theCollation sortedArrayFromArray:sectionArray collationStringSelector:@selector(name)];
         [self.neighborhoods addObject:sortedSection];
     }
-    
+    [[self navigationController] setNavigationBarHidden:NO];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
 - (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
+    [[self navigationController] setNavigationBarHidden:YES];
 	[super viewDidDisappear:animated];
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
