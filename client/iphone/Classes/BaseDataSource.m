@@ -52,7 +52,11 @@
             }
         }
         
-    }    
+    }
+}
+
+- (BOOL) fetchesMoreResults {
+    return YES;
 }
 
 - (void) fetchData: (NSURL *) url {

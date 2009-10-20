@@ -20,6 +20,10 @@
     return self;
 }
 
+- (BOOL) fetchesMoreResults {
+    return NO;
+}
+
 - (void) updateResultsForRegion: (MKCoordinateRegion) region_ {
     
     [self setRegion:region_];
