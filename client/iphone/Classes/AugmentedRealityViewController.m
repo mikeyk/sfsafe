@@ -37,7 +37,7 @@
     
 }
 
-#define MAX_DISTANCE 100
+#define MAX_DISTANCE 400
 - (void) resultsAvailable {
     if ([[self.dataSource locations] count] == 0) {
        [self setStatus:@"No results in your area."];
