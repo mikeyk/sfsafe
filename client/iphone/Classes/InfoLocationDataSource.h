@@ -17,5 +17,6 @@
 - (NSMutableDictionary *) filters;
 - (void) setDelegate: (id) delegate;
 - (void) release;
+- (BOOL) fetchesMoreResults;
 
 @end
