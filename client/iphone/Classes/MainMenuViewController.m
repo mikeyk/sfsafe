@@ -94,12 +94,14 @@
     [self dismissModalViewControllerAnimated:NO];
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Location Error" message:message delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
     [alert show];
+    [alert release];
 }
 
 -(void) foundLocationForAR:(CLLocation *) location {
+    [self dismissModalViewControllerAnimated:NO];    
     ByCoordinateDataSource * dataSource = [[ByCoordinateDataSource alloc] init];
     AugmentedRealityViewController * arVC = [[AugmentedRealityViewController alloc] initWithDataSource:dataSource center:location];
-    [self dismissModalViewControllerAnimated:NO];
+    
     [[self navigationController] pushViewController:arVC animated:YES];
     [arVC release];
     [dataSource release];
@@ -116,7 +118,7 @@
     [locationManager release];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+-(void) viewDidAppear:(BOOL)animated {
     [[self navigationController] setNavigationBarHidden:YES];
 
 }
