@@ -31,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [[self navigationController] setNavigationBarHidden:NO];
+
     MKCoordinateRegion region;
     MKCoordinateSpan span;
     span.latitudeDelta = DEFAULTSPAN;
@@ -43,6 +45,7 @@
     
     [detailMapView addAnnotation:infoLocation];
     [detailMapView setUserInteractionEnabled:NO];
+    [detailMapView setDelegate:self];
      
     [[self infoTitle] setText: infoLocation.category];
     [[self infoDescription] setText: infoLocation.description];
@@ -56,14 +59,22 @@
     
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+// Create the annotations view for use when it appears on the screen
+// from http://www.iphonedevsdk.com/forum/iphone-sdk-development/2991-understanding-delegates.html
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    
+    MKAnnotationView * rv = nil;
+    
+    if ([annotation isMemberOfClass:[InfoLocation class]]) {
+        rv = (InfoLocationAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"InfoLocation"];
+        if (rv == nil) {
+            rv = [[[InfoLocationAnnotationView alloc] init] autorelease];
+        }
+        [rv setAnnotation:annotation];
+    }
+    return rv;
+    
 }
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "InfoLocation.h"
+#import "InfoLocationAnnotationView.h"
 #import <MapKit/MapKit.h>
 
-@interface InfoLocationDetailViewController : UIViewController {
+@interface InfoLocationDetailViewController : UIViewController<MKMapViewDelegate> {
     UILabel * infoTitle;
     UILabel * infoTime;
     UITextView * infoDescription;    
@@ -24,6 +25,7 @@
 @property (nonatomic, retain) InfoLocation *infoLocation;
 @property (nonatomic, retain) IBOutlet MKMapView * detailMapView;
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil infoLocation:(InfoLocation*) infoLocation_;
 
 @end
