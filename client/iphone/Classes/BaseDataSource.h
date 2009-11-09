@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "InfoLocationDataSource.h"
 #import "InfoLocationDataSourceDelegate.h"
-#import "NSObject+NetworkJSON.h"
+#import "NSObject+StringFromURL.h"
+#import "NSObject+YAJL.h"
 #import "InfoLocation.h"
 
 
@@ -19,6 +20,7 @@
     NSMutableArray * locations;    
     NSNumber * hasFailedConnection;
     NSMutableDictionary * filters;
+    NSOperationQueue * opQueue;
     MKCoordinateRegion region;    
 }
 
@@ -26,6 +28,7 @@
 @property (nonatomic, retain) NSMutableDictionary * filters;
 @property (retain) NSArray * lastResultList;
 @property (retain) NSMutableArray * locations;
+@property (retain) NSOperationQueue * opQueue;
 @property (retain) NSNumber * hasFailedConnection;
 @property (readwrite) MKCoordinateRegion region;
 

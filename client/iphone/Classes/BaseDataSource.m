@@ -15,6 +15,7 @@
 @synthesize lastResultList;
 @synthesize delegate;
 @synthesize region;
+@synthesize opQueue;
 @synthesize locations;
 @synthesize hasFailedConnection;
 
@@ -22,11 +23,16 @@
     [self setFilters:[[NSMutableDictionary alloc] initWithCapacity:20]];
     [self setLocations:[[NSMutableArray alloc] initWithCapacity:100]];
     [self setHasFailedConnection:[NSNumber numberWithInt:0]];
+    [self setOpQueue:[[NSOperationQueue alloc] init]];
+    [opQueue setMaxConcurrentOperationCount:1];
+    
     return self;
 }
 
 - (void) doRequest: (NSURL *) url {
-    NSDictionary * response = (NSDictionary*)[self objectWithUrl:url];
+    NSString * jsonString = [self stringFromURL:url];
+    
+    NSDictionary * response = (NSDictionary*)[jsonString yajl_JSON];
     
     if (response == nil) {
         if (![self.hasFailedConnection boolValue]){
@@ -60,13 +66,9 @@
 }
 
 - (void) fetchData: (NSURL *) url {
-    
-    NSInvocationOperation * io = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doRequest:) object:url];
-    NSOperationQueue * opQueue = [[NSOperationQueue alloc] init];
-    [opQueue setMaxConcurrentOperationCount:1];
+
+    NSInvocationOperation * io = [[[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doRequest:) object:url] autorelease];
     [opQueue addOperation:io];
-    [io release];
-    [opQueue release];
 }
 
 - (void) receivedResults {
@@ -105,6 +107,11 @@
     
 - (void) updateResultsForRegion: (MKCoordinateRegion) region_ {
     
+}
+
+- (void) dealloc {
+    [super dealloc];
+    [opQueue release];
 }
 
 - (void) release {
