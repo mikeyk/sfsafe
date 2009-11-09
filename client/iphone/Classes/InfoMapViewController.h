@@ -13,6 +13,8 @@
 #import "InfoLocation.h"
 #import "InfoLocationAnnotationView.h"
 #import "MapFilterViewController.h"
+#import "OverlayLocation.h"
+#import "MapOverlayAnnotationView.h"
 #import "FilterCallerDelegate.h"
 #import "AugmentedRealityViewController.h"
 #import "InfoLocationDataSource.h"
@@ -24,6 +26,7 @@
     IBOutlet MKMapView * mainMapView;
     CLLocationCoordinate2D mapCenter;
     IBOutlet UIView * progressIndicator;
+    OverlayLocation * overlayAnnotation;
     IBOutlet UIToolbar * bottomBar;
     NSTimer * refreshRateLimiter;
     UIView * message;
@@ -35,6 +38,7 @@
 @property (retain) id <InfoLocationDataSource> dataSource;
 @property (retain) MKMapView * mainMapView;
 @property (retain) UIView * message;
+@property (retain) OverlayLocation * overlayAnnotation;
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation;
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;

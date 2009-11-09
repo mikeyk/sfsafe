@@ -25,6 +25,7 @@
 @synthesize mainMapView;
 @synthesize dataSource;
 @synthesize message;
+@synthesize overlayAnnotation;
 
 - (void) showMessage:(NSString *) messageText {
     UIView * message_ = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
@@ -55,6 +56,10 @@
         } else if (![dataSource fetchesMoreResults]) {
             [self showMessage:@"Touch Back to see a different neighborhood"];
         }
+        /*
+        UIImageView * overlay = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"map-overlay.png"]];
+        [mainMapView insertSubview:overlay atIndex:1];
+         */
     }
     return self;
 }
@@ -99,7 +104,7 @@
 - (void) networkError {
     UIAlertView * connectionAlert =[[UIAlertView alloc] 
                                     initWithTitle:@"Connection Error" 
-                                    message:@"We couldn't connect to SFSafe. Please try again later." 
+                                    message:@"We couldn't connect to Crime Desk SF. Please try again later." 
                                     delegate:[self navigationController] 
                                     cancelButtonTitle:@"Dismiss" 
                                     otherButtonTitles:nil];
@@ -114,6 +119,7 @@
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
     
     [message setHidden:YES];
+    
     // don't trigger a refresh on an animated move,
     // because it means the user just tapped on an icon
     if (!animated) {
@@ -162,13 +168,23 @@
         }        
     }
     
-    [mainMapView removeAnnotations:[mainMapView annotations]];
+    NSMutableArray * annotationsToRemove = [NSMutableArray arrayWithCapacity:50];
+    for (NSObject<MKAnnotation> * annotation in [mainMapView annotations]) {
+        if ([annotation isMemberOfClass:[InfoLocation class]]) {
+            [annotationsToRemove addObject:annotation];
+            [annotation release];
+        }
+    }
+    
+    [mainMapView removeAnnotations:annotationsToRemove];
+    
     NSMutableDictionary * hashedLocations = [NSMutableDictionary dictionaryWithCapacity:100];
     NSArray * lastResultList = [dataSource locations];
     for (InfoLocation * infoloc in lastResultList) {
         InfoLocation * infoLocCopy = [[InfoLocation alloc] initWithInfoLocation:infoloc];
         CLLocationCoordinate2D coord = [infoloc coordinate];
         NSString * hash = [NSString stringWithFormat:@"%.5f-%.5f", coord.latitude, coord.longitude];
+        
         if (![hashedLocations objectForKey:hash]) {
             [hashedLocations setValue:[NSNumber numberWithInt:1] forKey:hash];    
         } else {
@@ -180,6 +196,7 @@
             coord.longitude += lonoffset / 1300.0;
             [infoLocCopy setCoordinate:coord];            
         }
+        
         [mainMapView addAnnotation:infoLocCopy];
         [infoLocCopy release];
         
@@ -192,6 +209,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     [mainMapView setMapType:MKMapTypeStandard];
     [mainMapView setShowsUserLocation:YES];
     MKCoordinateRegion region;
@@ -253,12 +272,16 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [[self navigationController] setNavigationBarHidden:YES];
+}
+
 
 // Create the annotations view for use when it appears on the screen
 // from http://www.iphonedevsdk.com/forum/iphone-sdk-development/2991-understanding-delegates.html
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     
-    InfoLocationAnnotationView * rv = nil;
+    MKAnnotationView * rv = nil;
     
     if ([annotation isMemberOfClass:[InfoLocation class]]) {
         rv = (InfoLocationAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"InfoLocation"];
@@ -266,19 +289,24 @@
             rv = [[[InfoLocationAnnotationView alloc] init] autorelease];
         }
         [rv setAnnotation:annotation];
+    } else if ([annotation isMemberOfClass:[OverlayLocation class]]) {
+        rv = (MapOverlayAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"MapOverlay"];
+        if (rv == nil) {
+            rv = [[[MapOverlayAnnotationView alloc] init] autorelease];
+        }
     }
     return rv;
     
 }
 
-- (void) shareSFSafeLink {
+- (void) shareEmailLink {
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
         [picker setMailComposeDelegate:self];
         [picker setSubject:@"Check out this SF map"];
-        NSString * shortUrl = [NSString stringWithFormat:@"sfsafe://location?%f&%f", [[self mainMapView] centerCoordinate].latitude, [[self mainMapView] centerCoordinate].longitude];
+        NSString * shortUrl = [NSString stringWithFormat:@"crimedesksf://location?%f&%f", [[self mainMapView] centerCoordinate].latitude, [[self mainMapView] centerCoordinate].longitude];
         NSString * gmapsLink = [NSString stringWithFormat:@"http://maps.google.com/maps?f=qhl=en&q=%f,%f", [[self mainMapView] centerCoordinate].latitude, [[self mainMapView] centerCoordinate].longitude]; 
-        NSString * messageBody = [NSString stringWithFormat:@"Hey,\nI was looking at the safety information for this location in the SFSafe iPhone app and thought you might want to see it.<br/><br/><a href='%@'>Click to see it in SFSafe</a>, or <a href='%@'>get SFSafe free on the App Store</a>. <br/>You can also see just the location in <a href='%@'>Google Maps</a><br/><br/>-Your name", shortUrl, @"http://appstorelink.com", gmapsLink];
+        NSString * messageBody = [NSString stringWithFormat:@"Hey,\nI was looking at the safety information for this location in the Crime Desk SF iPhone app and thought you might want to see it.<br/><br/><a href='%@'>Click to see it in Crime Desk SF</a>, or <a href='%@'>get Crime Desk SF free on the App Store</a>. <br/>You can also see just the location in <a href='%@'>Google Maps</a><br/><br/>-Your name", shortUrl, @"http://appstorelink.com", gmapsLink];
         NSLog(@"%@", messageBody);
         [picker setMessageBody:messageBody isHTML:YES];
         [self presentModalViewController:picker animated:YES];
@@ -293,7 +321,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:
-            [self shareSFSafeLink];         
+            [self shareEmailLink];         
             break;
         default:
             break;
@@ -309,7 +337,7 @@
                                     delegate:self 
                                     cancelButtonTitle:@"Cancel"
                                     destructiveButtonTitle:nil 
-                                    otherButtonTitles:@"E-mail SFSafe Link", 
+                                    otherButtonTitles:@"E-mail Link", 
                                     nil];
     [shareMenu showInView:self.view];
     [shareMenu release];
