@@ -21,9 +21,11 @@
     SEL onError;
     BOOL shouldCorrectLocation;
     int locationAttempts;
+    BOOL receivedOneGoodLocation;
     IBOutlet UIActivityIndicatorView * progressSpinner;
 }
 
+@property (readwrite) BOOL receivedOneGoodLocation;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, assign) id <LocationCallerDelegate> delegate;
 @property (nonatomic, assign) SEL callback;

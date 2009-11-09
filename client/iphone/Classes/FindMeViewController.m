@@ -18,6 +18,7 @@
 @synthesize delegate;
 @synthesize callback;
 @synthesize onError;
+@synthesize receivedOneGoodLocation;
 @synthesize progressSpinner;
 @synthesize locationAttempts;
 @synthesize shouldCorrectLocation;
@@ -26,6 +27,7 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         [self setLocationAttempts:[[NSNumber numberWithInt:0] intValue]];
         [self setShouldCorrectLocation:NO];
+        [self setReceivedOneGoodLocation:NO];
     }
     return self;
 }
@@ -68,13 +70,14 @@
                 [delegate performSelector:onError withObject:@"It doesn't look like you're in SF, and this feature requires an SF location to work."];
                 return;
             }
-        } 
+        }
         CLLocation * correctedLocation = [[CLLocation alloc] initWithCoordinate:coord altitude:[newLocation altitude] horizontalAccuracy:[newLocation horizontalAccuracy] verticalAccuracy:[newLocation verticalAccuracy] timestamp:[newLocation timestamp]];
-        
-        [[self locationManager] stopUpdatingLocation];
-        [delegate performSelector:callback withObject:correctedLocation];
-        [correctedLocation release];
-        [[self progressSpinner] stopAnimating];
+        if (!receivedOneGoodLocation) {
+            [delegate performSelector:callback withObject:correctedLocation];
+            [correctedLocation release];
+            [[self progressSpinner] stopAnimating];
+            [self setReceivedOneGoodLocation:YES];            
+        }
     }
 }
 
