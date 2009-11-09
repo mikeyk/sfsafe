@@ -19,15 +19,15 @@
 
     // MxWeas' quick reachability sample
     
-    SCNetworkReachabilityRef reach = SCNetworkReachabilityCreateWithName(kCFAllocatorSystemDefault, "mikekrooog.com"); // Attempt to ping google.com
+    SCNetworkReachabilityRef reach = SCNetworkReachabilityCreateWithName(kCFAllocatorSystemDefault, "google.com"); // Attempt to ping google.com
     SCNetworkConnectionFlags flags;
     SCNetworkReachabilityGetFlags(reach, &flags); // Store reachability flags in the variable, flags.
     
     if(!(kSCNetworkReachabilityFlagsReachable & flags)) {
         UIAlertView * connectionAlert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"This app requires an Internet connection, but we couldn't detect one. Please turn off Airplane Mode or connect to a valid network."  delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [connectionAlert show];
+        [connectionAlert release];
     }
-    
     // the Navigation bar has previously been created in IB
     [window addSubview:[navigationController view]];
     [[navigationController navigationBar] setTintColor:[UIColor grayColor]];
@@ -43,7 +43,7 @@
     user will be on the home screen
 */
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    // example url: sfsafe://location?37.7&-122
+    // example url: crimedesksf://location?37.7&-122
     NSArray * params = [[url query] componentsSeparatedByString:@"&"];
     
 
