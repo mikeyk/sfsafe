@@ -27,7 +27,6 @@
                   editingInfo:(NSDictionary *)editingInfo;
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker;
 - (id)initWithDataSource:(id<InfoLocationDataSource>) dataSource_ center: (CLLocation *) center;
-- (void)startRealityView;
 
 @end
 

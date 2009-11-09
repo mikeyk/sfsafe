@@ -21,6 +21,9 @@
         [self setDelegate:self];
         [self setCenterLocation:center];
         
+        [self setScaleViewsBasedOnDistance:YES];
+        [self setMinimumScaleFactor:0.5];
+        
         MKCoordinateRegion region;
         region.center = [center coordinate];
         region.span.latitudeDelta = (0.1 / 69);
@@ -28,7 +31,7 @@
         [self setDataSource:dataSource_];
         [dataSource setDelegate:self];
         [dataSource updateResultsForRegion:region];
-        [self setStatus:@"Loading..."];
+        //[self setStatus:@"Loading..."];
         NSMutableArray * newArr = [[NSMutableArray alloc] initWithCapacity:25];
         [self setCoordinates:newArr];
         [newArr release];
@@ -40,10 +43,10 @@
 #define MAX_DISTANCE 400
 - (void) resultsAvailable {
     if ([[self.dataSource locations] count] == 0) {
-       [self setStatus:@"No results in your area."];
+       //[self setStatus:@"No results in your area."];
     }
     else{
-        [[self statusIndicator] setHidden:YES];
+        //[[self statusIndicator] setHidden:YES];
         for(NSObject * obj in [self.dataSource locations] ){
             InfoLocation * infoloc = (InfoLocation *) obj;
             
@@ -62,7 +65,6 @@
             }
             [tempLocation release]; 
         }
-        
         [self addCoordinates:coordinates]; 
     }  
 }
@@ -91,7 +93,6 @@
     
 }
 
-
 #define BOX_WIDTH 200
 #define BOX_HEIGHT BOX_WIDTH / 4
 
@@ -107,7 +108,7 @@
     return myView;
 
 }
-
+ 
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
