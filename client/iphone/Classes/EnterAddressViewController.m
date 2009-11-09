@@ -23,15 +23,13 @@
     return self;
 }
 
-
 - (void) textFieldDidBeginEditing:(UITextField *)textField {
-    [UIView beginAnimations:nil context:NULL];
+/*    [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:NO];
     [UIView setAnimationDuration:0.25];
     CGRect rect = [self.view frame];
-    rect.origin.y -= 100;
     [self.view setFrame:rect];
-    [UIView commitAnimations];
+    [UIView commitAnimations]; */
 }
 
 - (CLLocation *) tryToFindSFAddress: (NSDictionary *) response {
@@ -50,20 +48,7 @@
                         coord.latitude = [[coordinates objectAtIndex:1] floatValue];
                         coord.longitude = [[coordinates objectAtIndex:0] floatValue];
                         
-                        if (![self isInSanFrancisco:coord]) {
-                            /*
-                             NSString * notInSFError = @"It doesn't look like that location is in San Francisco. Please try a different location.";
-                             UIAlertView * notInSF = [[UIAlertView alloc] 
-                             initWithTitle:@"Location Error" 
-                             message:notInSFError  
-                             delegate:self
-                             cancelButtonTitle:@"Dismiss" 
-                             otherButtonTitles:nil ];
-                             [notInSF show];
-                             [notInSF release];
-                             */
-                            
-                        } else {
+                        if ([self isInSanFrancisco:coord]) {
                             CLLocation * loc = [[CLLocation alloc] initWithCoordinate:coord altitude:0.0 horizontalAccuracy:0.1 verticalAccuracy:0.1 timestamp:[NSDate date]];
                             return loc;
                         }
@@ -90,10 +75,14 @@
     [biasOptions release];
     
     
-    NSURL * localhost = [[NSURL alloc] initWithString:urlString];
+    NSURL * gmaps = [[NSURL alloc] initWithString:urlString];
     [urlString release];
     
-    NSDictionary * response = (NSDictionary*)[self objectWithUrl:localhost];
+    NSString * jsonString = [self stringFromURL:gmaps];
+    NSDictionary * response = (NSDictionary*)[jsonString yajl_JSON];
+    
+    [gmaps release];
+    
     [response retain];
     return response;
     
@@ -109,7 +98,7 @@
     if (response == nil) {
         UIAlertView * connectionAlert = [[UIAlertView alloc] 
                                             initWithTitle:@"Location Error" 
-                                            message:@"SFSafe could not connect to the location service. Please try again later."  
+                                            message:@"Crime Desk SF could not connect to the location service. Please try again later."  
                                             delegate:self 
                                             cancelButtonTitle:@"Dismiss" 
                                             otherButtonTitles:nil ];
@@ -139,7 +128,7 @@
                 } else {
                     UIAlertView * connectionAlert = [[UIAlertView alloc] 
                                                      initWithTitle:@"Location Error" 
-                                                     message:@"SFSafe could not find this location. Please try a different location."  
+                                                     message:@"Crime Desk SF could not find this location. Please try a different location."  
                                                      delegate:self 
                                                      cancelButtonTitle:@"Dismiss" 
                                                      otherButtonTitles:nil ];
@@ -155,6 +144,12 @@
     [response release];
     
     
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [addressField setTextColor:[UIColor blackColor]];
+    [addressField becomeFirstResponder];
+
 }
 
 - (IBAction) goHome {

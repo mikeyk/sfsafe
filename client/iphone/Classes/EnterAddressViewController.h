@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "LocationCallerDelegate.h"
-#import "NSObject+NetworkJSON.h"
+#import "NSObject+YAJL.h"
+#import "NSObject+StringFromURL.h"
 #import "UIViewController+SanFrancisco.h"
 
 @interface EnterAddressViewController : UIViewController <UITextFieldDelegate> {
