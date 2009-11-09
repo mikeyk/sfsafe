@@ -28,11 +28,23 @@
 	UIImagePickerController *cameraController;
 	
 	NSObject<ARViewDelegate> *delegate;
-    
-    UIView * statusIndicator;
+	NSObject<CLLocationManagerDelegate> *locationDelegate;
+	NSObject<UIAccelerometerDelegate> *accelerometerDelegate;
+	
+	BOOL scaleViewsBasedOnDistance;
+	double maximumScaleDistance;
+	double minimumScaleFactor;
+	
+	//defaults to 20hz;
+	double updateFrequency;
+	
+	BOOL rotateViewsBasedOnPerspective;
+	double maximumRotationAngle;
 	
 @private
 	BOOL ar_debugMode;
+	
+	NSTimer *_updateTimer;
 	
 	UIView *ar_overlayView;
 	
@@ -46,7 +58,14 @@
 
 @property BOOL debugMode;
 
-- (void) setStatus:(NSString *)status;
+@property BOOL scaleViewsBasedOnDistance;
+@property double maximumScaleDistance;
+@property double minimumScaleFactor;
+
+@property BOOL rotateViewsBasedOnPerspective;
+@property double maximumRotationAngle;
+
+@property double updateFrequency;
 
 //adding coordinates to the underlying data model.
 - (void)addCoordinate:(ARCoordinate *)coordinate;
@@ -64,7 +83,7 @@
 - (id)initWithLocationManager:(CLLocationManager *)manager;
 
 - (void)startListening;
-- (void)updateLocations;
+- (void)updateLocations:(NSTimer *)timer;
 
 - (CGPoint)pointInView:(UIView *)realityView forCoordinate:(ARCoordinate *)coordinate;
 
@@ -73,12 +92,12 @@
 @property (nonatomic, retain) UIImagePickerController *cameraController;
 
 @property (nonatomic, assign) NSObject<ARViewDelegate> *delegate;
+@property (nonatomic, assign) NSObject<CLLocationManagerDelegate> *locationDelegate;
+@property (nonatomic, assign) NSObject<UIAccelerometerDelegate> *accelerometerDelegate;
 
 @property (retain) ARCoordinate *centerCoordinate;
 
 @property (nonatomic, retain) UIAccelerometer *accelerometerManager;
 @property (nonatomic, retain) CLLocationManager *locationManager;
-
-@property (nonatomic, retain) UIView * statusIndicator;
 
 @end

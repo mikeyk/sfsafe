@@ -27,7 +27,7 @@
 }
 
 - (NSUInteger)hash{
-	return [self.title hash];
+	return ([self.title hash] ^ [self.subtitle hash]) + (int)(self.radialDistance + self.inclination + self.azimuth);
 }
 
 - (BOOL)isEqual:(id)other {
@@ -44,7 +44,10 @@
 	BOOL equal = self.radialDistance == otherCoordinate.radialDistance;
 	equal = equal && self.inclination == otherCoordinate.inclination;
 	equal = equal && self.azimuth == otherCoordinate.azimuth;
-	equal = equal && [self.title isEqualToString:otherCoordinate.title];
+		
+	if (self.title && otherCoordinate.title || self.title && !otherCoordinate.title || !self.title && otherCoordinate.title) {
+		equal = equal && [self.title isEqualToString:otherCoordinate.title];
+	}
 	
 	return equal;
 }
@@ -58,7 +61,7 @@
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:@"%@ r: %.3fm φ: %.3f° θ: %.3f°", self.title, self.radialDistance, self.azimuth * (180.0/M_PI), self.inclination * (180.0/M_PI)];
+	return [NSString stringWithFormat:@"%@ r: %.3fm φ: %.3f° θ: %.3f°", self.title, self.radialDistance, radiansToDegrees(self.azimuth), radiansToDegrees(self.inclination)];
 }
 
 @end
