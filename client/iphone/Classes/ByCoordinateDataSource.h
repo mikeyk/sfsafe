@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "InfoLocationDataSourceDelegate.h"
 #import "InfoLocationDataSource.h"
-#import "NSObject+NetworkJSON.h"
 #import "InfoLocation.h"
 #import "BaseDataSource.h"
 

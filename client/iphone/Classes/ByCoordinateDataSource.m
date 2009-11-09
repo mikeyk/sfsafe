@@ -17,7 +17,7 @@
 }
 
 - (void) updateResultsForRegion: (MKCoordinateRegion) region_ {
-    
+
     NSString * appconfigPath = [[NSBundle mainBundle] pathForResource:@"appconfig" ofType:@"plist"];
     NSDictionary * appconfig = [NSDictionary dictionaryWithContentsOfFile:appconfigPath];
     NSString * appUrl = [appconfig objectForKey:@"prod-server"];
@@ -33,6 +33,5 @@
                                              path:path];
     [self fetchData:theURL];
     [theURL release];
-    
 }
 @end
