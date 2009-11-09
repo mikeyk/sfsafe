@@ -37,19 +37,17 @@
 	coordinate=c;
     [self setDescription:[info valueForKey:@"description"]];
     [self setCategory: [info valueForKey:@"category"]];
-    if ([self.category isEqualToString:@"Drug/narcotic"]) {
-        [self setShortName:@"drug"];
-    } else if ([self.category isEqualToString:@"Larceny/theft"]) {
-        [self setShortName:@"larceny"];
-    } else if ([self.category isEqualToString:@"Sex Offenses, Forcible"]) {
-        [self setShortName:@"sexoffenses"];
-    } else if ([self.category isEqualToString:@"Vehicle Theft"]) {
-        [self setShortName:@"vehicle-theft"];
-    } else {
-        [self setShortName:[self.category lowercaseString]];
-    }
+    [self setShortName:[self shortNameForCategory:self.category]];
     [self setTimestamp:[NSDate dateWithTimeIntervalSince1970:[[info valueForKey:@"timestamp"] intValue]]];
 	return self;
+}
+
+- (void) dealloc {
+    [super dealloc];
+    [category release];
+    [shortName release];
+    [timestamp release];
+    [description release];
 }
 
 @end
