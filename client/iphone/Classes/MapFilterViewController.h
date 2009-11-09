@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FilterCallerDelegate.h"
+#import "NSObject+ShortCategoryName.h"
 
 @interface MapFilterViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UITableView * filterTable; 

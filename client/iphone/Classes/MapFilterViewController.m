@@ -70,12 +70,10 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    CGRect textFrame = CGRectMake(10, 10, 210, 20);
-    CGRect switchFrame = CGRectMake(195, 7, 200, 20); 
+    CGRect switchFrame = CGRectMake(220, 7, 200, 20); 
     NSString * category = [categoryNames objectAtIndex:[indexPath row]];
     
-    UILabel *categoryName = [[UILabel alloc] initWithFrame:textFrame]; 
-    categoryName.text = category;
+    [[cell textLabel] setText:category];
     
     
     UISwitch * thisSwitch = [[UISwitch alloc] initWithFrame:switchFrame];
@@ -90,12 +88,12 @@
     [thisSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     
     
-    [categoryName setFont:[UIFont fontWithName:@"American Typewriter" size:16.0]];
-
+    [[cell imageView] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self shortNameForCategory:category]]]];
     
-    [cell.contentView addSubview:categoryName];
+    [[cell textLabel] setFont:[UIFont fontWithName:@"American Typewriter" size:15.0]];
+
+
     [cell.contentView addSubview:thisSwitch];
-    [categoryName release];
     [thisSwitch release];
     [category release];
     
