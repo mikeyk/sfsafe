@@ -36,7 +36,7 @@
         } else {
             NSLog(@"MISSING IMAGE: %@", imageFileName);
         }
-        
+
         UIButton *myDetailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         myDetailButton.frame = CGRectMake(0, 0, 23, 23);
         myDetailButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
