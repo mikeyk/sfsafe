@@ -16,6 +16,7 @@
 
 -(IBAction) goMKrieger;
 -(IBAction) goRPadbury;
+-(IBAction) goTwitter;
 
 @property (retain) UIButton * backHomeButton;
 @end

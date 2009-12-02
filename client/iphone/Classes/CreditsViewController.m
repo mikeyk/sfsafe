@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [aScrollView setContentSize:CGSizeMake(280, 400)];
+    [aScrollView setContentSize:CGSizeMake(280, 460)];
+    [aScrollView setHidden:NO];
+}
+
+- (IBAction) goTwitter {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/crimedesksf"]];    
 }
 
 - (IBAction) goMKrieger {
