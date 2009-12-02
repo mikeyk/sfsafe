@@ -15,21 +15,20 @@
 		2899E5220DE3E06400AC0155 /* InfoMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* InfoMapViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* InfoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* InfoMapViewController.m */; };
-		C80601B0104E45FB006AA19D /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = C80601A9104E45FB006AA19D /* ARCoordinate.m */; };
-		C80601B1104E45FB006AA19D /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80601AB104E45FB006AA19D /* ARViewController.m */; };
-		C80601B2104E45FB006AA19D /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = C80601AD104E45FB006AA19D /* ARGeoCoordinate.m */; };
-		C80601B3104E45FB006AA19D /* ARGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80601AF104E45FB006AA19D /* ARGeoViewController.m */; };
+		C804C0DA10A92A8200C284FF /* paper-scrap.png in Resources */ = {isa = PBXBuildFile; fileRef = C804C0D910A92A8200C284FF /* paper-scrap.png */; };
+		C804C18A10A938DE00C284FF /* Homescreen-blank.png in Resources */ = {isa = PBXBuildFile; fileRef = C804C18910A938DE00C284FF /* Homescreen-blank.png */; };
+		C804C1CA10A93C1000C284FF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C804C1C910A93C1000C284FF /* Icon.png */; };
+		C804C1DB10A93CD000C284FF /* arcoordinateview.png in Resources */ = {isa = PBXBuildFile; fileRef = C804C1DA10A93CD000C284FF /* arcoordinateview.png */; };
+		C804C24510A946D100C284FF /* crime-report-rotated.png in Resources */ = {isa = PBXBuildFile; fileRef = C804C24410A946D100C284FF /* crime-report-rotated.png */; };
 		C80601B6104E4609006AA19D /* AugmentedRealityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80601B5104E4609006AA19D /* AugmentedRealityViewController.m */; };
 		C806022D104E4A43006AA19D /* AugmentedRealityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C806022C104E4A43006AA19D /* AugmentedRealityViewController.xib */; };
 		C81FDA60107B060700CEDB9E /* ARCoordinateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81FDA5F107B060700CEDB9E /* ARCoordinateView.xib */; };
-		C81FDA6E107B0A1F00CEDB9E /* arbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C81FDA6D107B0A1F00CEDB9E /* arbackground.png */; };
 		C81FDA83107B0BB800CEDB9E /* ARCoordinateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C81FDA82107B0BB800CEDB9E /* ARCoordinateView.m */; };
 		C83D1E0E104B20FC0048B36B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83D1E0D104B20FC0048B36B /* MapKit.framework */; };
 		C83D1E86104B25490048B36B /* InfoLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C83D1E85104B25490048B36B /* InfoLocation.m */; };
 		C83D20D5104B3D6C0048B36B /* InfoLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83D20D3104B3D6C0048B36B /* InfoLocationDetailViewController.m */; };
 		C83D20D6104B3D6C0048B36B /* InfoLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83D20D4104B3D6C0048B36B /* InfoLocationDetailViewController.xib */; };
 		C83D20FE104B40640048B36B /* InfoLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C83D20FD104B40640048B36B /* InfoLocationAnnotationView.m */; };
-		C83D221D104B4F830048B36B /* filefolder.png in Resources */ = {isa = PBXBuildFile; fileRef = C83D221C104B4F830048B36B /* filefolder.png */; };
 		C83D2231104B522B0048B36B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83D222F104B522B0048B36B /* MainMenuViewController.m */; };
 		C83D2232104B522B0048B36B /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83D2230104B522B0048B36B /* MainMenuViewController.xib */; };
 		C83D22B5104B57870048B36B /* FindMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83D22B3104B57870048B36B /* FindMeViewController.m */; };
@@ -37,12 +36,10 @@
 		C83D22E0104B58AD0048B36B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83D22DF104B58AD0048B36B /* CoreLocation.framework */; };
 		C83D254B104B92BE0048B36B /* MapFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83D2549104B92BE0048B36B /* MapFilterViewController.m */; };
 		C83D254C104B92BE0048B36B /* MapFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83D254A104B92BE0048B36B /* MapFilterViewController.xib */; };
-		C85BB5D4104B1E7800341D62 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C85BB5C9104B1E7800341D62 /* NSObject+SBJSON.m */; };
-		C85BB5D5104B1E7800341D62 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C85BB5CB104B1E7800341D62 /* NSString+SBJSON.m */; };
-		C85BB5D6104B1E7800341D62 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C85BB5CD104B1E7800341D62 /* SBJSON.m */; };
-		C85BB5D7104B1E7800341D62 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C85BB5CF104B1E7800341D62 /* SBJsonBase.m */; };
-		C85BB5D8104B1E7800341D62 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C85BB5D1104B1E7800341D62 /* SBJsonParser.m */; };
-		C85BB5D9104B1E7800341D62 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C85BB5D3104B1E7800341D62 /* SBJsonWriter.m */; };
+		C855B36B108D962A00ADB1DA /* home-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C855B36A108D962A00ADB1DA /* home-highlight.png */; };
+		C855B3E3108D9C3D00ADB1DA /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C855B3E1108D9C3D00ADB1DA /* CreditsViewController.m */; };
+		C855B3E4108D9C3D00ADB1DA /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C855B3E2108D9C3D00ADB1DA /* CreditsViewController.xib */; };
+		C855B562108DAECD00ADB1DA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C855B561108DAECD00ADB1DA /* SystemConfiguration.framework */; };
 		C8682F00107994F300627B83 /* NeighborhoodPickerViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = C8682EFE107994F300627B83 /* NeighborhoodPickerViewControler.m */; };
 		C8682F01107994F300627B83 /* NeighborhoodPickerViewControler.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8682EFF107994F300627B83 /* NeighborhoodPickerViewControler.xib */; };
 		C8682FD41079A55900627B83 /* neighborhoods.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8682FD31079A55900627B83 /* neighborhoods.plist */; };
@@ -53,12 +50,26 @@
 		C86832101079DCC600627B83 /* Neighborhood.m in Sources */ = {isa = PBXBuildFile; fileRef = C868320F1079DCC600627B83 /* Neighborhood.m */; };
 		C86834A0107A687800627B83 /* BaseDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C868349F107A687800627B83 /* BaseDataSource.m */; };
 		C8999B5E108062B800C4663E /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8999B5D108062B800C4663E /* Entitlements.plist */; };
-		C8B54854105C7B0F000BF55D /* address.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8B54851105C7B0F000BF55D /* address.jpg */; };
-		C8B54855105C7B0F000BF55D /* blank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8B54852105C7B0F000BF55D /* blank.jpg */; };
+		C8A444D010A7A386006D2A8D /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A444C710A7A386006D2A8D /* ARCoordinate.m */; };
+		C8A444D110A7A386006D2A8D /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A444C910A7A386006D2A8D /* ARGeoCoordinate.m */; };
+		C8A444D210A7A386006D2A8D /* ARGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A444CB10A7A386006D2A8D /* ARGeoViewController.m */; };
+		C8A444D310A7A386006D2A8D /* ARKitDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A444CD10A7A386006D2A8D /* ARKitDemoAppDelegate.m */; };
+		C8A444D410A7A386006D2A8D /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A444CF10A7A386006D2A8D /* ARViewController.m */; };
+		C8A4450610A7A457006D2A8D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A4450510A7A457006D2A8D /* QuartzCore.framework */; };
+		C8A4468A10A7BA9D006D2A8D /* button-rollover.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A4468510A7BA9D006D2A8D /* button-rollover.png */; };
+		C8A4468B10A7BA9D006D2A8D /* crime-report.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A4468610A7BA9D006D2A8D /* crime-report.png */; };
+		C8A4468C10A7BA9D006D2A8D /* Homescreen-3G.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A4468710A7BA9D006D2A8D /* Homescreen-3G.png */; };
+		C8A4468D10A7BA9D006D2A8D /* Homescreen-3GS.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A4468810A7BA9D006D2A8D /* Homescreen-3GS.png */; };
+		C8A4468E10A7BA9D006D2A8D /* info-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A4468910A7BA9D006D2A8D /* info-screen.png */; };
+		C8A791D01094F1E8005A6E41 /* MapOverlayAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A791CE1094F1E8005A6E41 /* MapOverlayAnnotationView.m */; };
+		C8A791D11094F1E8005A6E41 /* MapOverlayAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A791CF1094F1E8005A6E41 /* MapOverlayAnnotationView.xib */; };
+		C8A7922F1094F62F005A6E41 /* OverlayLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A7922E1094F62F005A6E41 /* OverlayLocation.m */; };
+		C8A7935B10950686005A6E41 /* NSObject+ShortCategoryName.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A7935A10950686005A6E41 /* NSObject+ShortCategoryName.m */; };
+		C8A795DA10952FD4005A6E41 /* libYAJLIPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A795D110952FD4005A6E41 /* libYAJLIPhone.a */; };
+		C8A795FC109531E7005A6E41 /* NSObject+StringFromURL.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A795FB109531E7005A6E41 /* NSObject+StringFromURL.m */; };
 		C8B54856105C7B0F000BF55D /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8B54853105C7B0F000BF55D /* home.jpg */; };
 		C8B5485A105C7B40000BF55D /* EnterAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B54858105C7B40000BF55D /* EnterAddressViewController.m */; };
 		C8B5485B105C7B40000BF55D /* EnterAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B54859105C7B40000BF55D /* EnterAddressViewController.xib */; };
-		C8B549DA105C88A0000BF55D /* NSObject+NetworkJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B549D9105C88A0000BF55D /* NSObject+NetworkJSON.m */; };
 		C8B54CC1105E14AF000BF55D /* vehicle-theft.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54CC0105E14AF000BF55D /* vehicle-theft.png */; };
 		C8B54D60105E1ED8000BF55D /* drug.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54D5F105E1ED8000BF55D /* drug.png */; };
 		C8B54DBC105E2355000BF55D /* robbery.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54DBB105E2355000BF55D /* robbery.png */; };
@@ -69,17 +80,22 @@
 		C8B54EC6105E3A81000BF55D /* map-sample.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54EC5105E3A81000BF55D /* map-sample.png */; };
 		C8B54ED0105E3CD9000BF55D /* burglary.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54ECF105E3CD9000BF55D /* burglary.png */; };
 		C8B54EF4105E3FA5000BF55D /* sexoffenses.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54EF3105E3FA5000BF55D /* sexoffenses.png */; };
-		C8B54F0D105E488F000BF55D /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B54F0C105E488F000BF55D /* center.png */; };
 		C8B55033105E5966000BF55D /* UIViewController+SanFrancisco.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B55032105E5966000BF55D /* UIViewController+SanFrancisco.m */; };
+		C8C0555210A88A350088D584 /* menu-assault.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0554A10A88A350088D584 /* menu-assault.png */; };
+		C8C0555310A88A350088D584 /* menu-burglary.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0554B10A88A350088D584 /* menu-burglary.png */; };
+		C8C0555410A88A350088D584 /* menu-drug.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0554C10A88A350088D584 /* menu-drug.png */; };
+		C8C0555510A88A350088D584 /* menu-larceny.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0554D10A88A350088D584 /* menu-larceny.png */; };
+		C8C0555610A88A350088D584 /* menu-robbery.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0554E10A88A350088D584 /* menu-robbery.png */; };
+		C8C0555710A88A350088D584 /* menu-sexoffenses.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0554F10A88A350088D584 /* menu-sexoffenses.png */; };
+		C8C0555810A88A350088D584 /* menu-vandalism.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0555010A88A350088D584 /* menu-vandalism.png */; };
+		C8C0555910A88A350088D584 /* menu-vehicle-theft.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C0555110A88A350088D584 /* menu-vehicle-theft.png */; };
 		C8F61C64105E6B48007F3252 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F61C63105E6B48007F3252 /* MessageUI.framework */; };
-		C8F61D4A105E7188007F3252 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C8F61D49105E7188007F3252 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* sfinfoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfinfoAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* sfinfoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sfinfoAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* sfinfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfinfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* InfoMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMapViewController.xib; sourceTree = "<group>"; };
@@ -88,20 +104,16 @@
 		28D7ACF70DDB3853001CB0EB /* InfoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoMapViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* sfinfo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfinfo_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* sfinfo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sfinfo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C80601A8104E45FB006AA19D /* ARCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCoordinate.h; sourceTree = "<group>"; };
-		C80601A9104E45FB006AA19D /* ARCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCoordinate.m; sourceTree = "<group>"; };
-		C80601AA104E45FB006AA19D /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
-		C80601AB104E45FB006AA19D /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
-		C80601AC104E45FB006AA19D /* ARGeoCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoCoordinate.h; sourceTree = "<group>"; };
-		C80601AD104E45FB006AA19D /* ARGeoCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoCoordinate.m; sourceTree = "<group>"; };
-		C80601AE104E45FB006AA19D /* ARGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoViewController.h; sourceTree = "<group>"; };
-		C80601AF104E45FB006AA19D /* ARGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoViewController.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C804C0D910A92A8200C284FF /* paper-scrap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-scrap.png"; path = "../gfx/out/paper-scrap.png"; sourceTree = SOURCE_ROOT; };
+		C804C18910A938DE00C284FF /* Homescreen-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Homescreen-blank.png"; path = "../gfx/out/Homescreen-blank.png"; sourceTree = SOURCE_ROOT; };
+		C804C1C910A93C1000C284FF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C804C1DA10A93CD000C284FF /* arcoordinateview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arcoordinateview.png; path = ../gfx/out/arcoordinateview.png; sourceTree = SOURCE_ROOT; };
+		C804C24410A946D100C284FF /* crime-report-rotated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crime-report-rotated.png"; path = "../gfx/out/crime-report-rotated.png"; sourceTree = SOURCE_ROOT; };
 		C80601B4104E4609006AA19D /* AugmentedRealityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedRealityViewController.h; sourceTree = "<group>"; };
 		C80601B5104E4609006AA19D /* AugmentedRealityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedRealityViewController.m; sourceTree = "<group>"; };
 		C806022C104E4A43006AA19D /* AugmentedRealityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AugmentedRealityViewController.xib; sourceTree = "<group>"; };
 		C81FDA5F107B060700CEDB9E /* ARCoordinateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ARCoordinateView.xib; path = Classes/ARCoordinateView.xib; sourceTree = "<group>"; };
-		C81FDA6D107B0A1F00CEDB9E /* arbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arbackground.png; path = ../gfx/out/arbackground.png; sourceTree = SOURCE_ROOT; };
 		C81FDA81107B0BB800CEDB9E /* ARCoordinateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCoordinateView.h; sourceTree = "<group>"; };
 		C81FDA82107B0BB800CEDB9E /* ARCoordinateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCoordinateView.m; sourceTree = "<group>"; };
 		C83D1E0D104B20FC0048B36B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -112,7 +124,6 @@
 		C83D20D4104B3D6C0048B36B /* InfoLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InfoLocationDetailViewController.xib; path = Classes/InfoLocationDetailViewController.xib; sourceTree = "<group>"; };
 		C83D20FC104B40640048B36B /* InfoLocationAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoLocationAnnotationView.h; sourceTree = "<group>"; };
 		C83D20FD104B40640048B36B /* InfoLocationAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoLocationAnnotationView.m; sourceTree = "<group>"; };
-		C83D221C104B4F830048B36B /* filefolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filefolder.png; path = ../gfx/filefolder.png; sourceTree = SOURCE_ROOT; };
 		C83D222E104B522B0048B36B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		C83D222F104B522B0048B36B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		C83D2230104B522B0048B36B /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenuViewController.xib; path = Classes/MainMenuViewController.xib; sourceTree = "<group>"; };
@@ -125,19 +136,11 @@
 		C83D2549104B92BE0048B36B /* MapFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapFilterViewController.m; sourceTree = "<group>"; };
 		C83D254A104B92BE0048B36B /* MapFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapFilterViewController.xib; path = Classes/MapFilterViewController.xib; sourceTree = "<group>"; };
 		C83D25E9104B9A330048B36B /* FilterCallerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCallerDelegate.h; sourceTree = "<group>"; };
-		C85BB5C7104B1E7800341D62 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		C85BB5C8104B1E7800341D62 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		C85BB5C9104B1E7800341D62 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		C85BB5CA104B1E7800341D62 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		C85BB5CB104B1E7800341D62 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
-		C85BB5CC104B1E7800341D62 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		C85BB5CD104B1E7800341D62 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
-		C85BB5CE104B1E7800341D62 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		C85BB5CF104B1E7800341D62 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
-		C85BB5D0104B1E7800341D62 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		C85BB5D1104B1E7800341D62 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		C85BB5D2104B1E7800341D62 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		C85BB5D3104B1E7800341D62 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C855B36A108D962A00ADB1DA /* home-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-highlight.png"; path = "../gfx/out/home-highlight.png"; sourceTree = SOURCE_ROOT; };
+		C855B3E0108D9C3D00ADB1DA /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
+		C855B3E1108D9C3D00ADB1DA /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
+		C855B3E2108D9C3D00ADB1DA /* CreditsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CreditsViewController.xib; path = Classes/CreditsViewController.xib; sourceTree = "<group>"; };
+		C855B561108DAECD00ADB1DA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C8682EFD107994F300627B83 /* NeighborhoodPickerViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeighborhoodPickerViewControler.h; sourceTree = "<group>"; };
 		C8682EFE107994F300627B83 /* NeighborhoodPickerViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeighborhoodPickerViewControler.m; sourceTree = "<group>"; };
 		C8682EFF107994F300627B83 /* NeighborhoodPickerViewControler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NeighborhoodPickerViewControler.xib; path = Classes/NeighborhoodPickerViewControler.xib; sourceTree = "<group>"; };
@@ -154,14 +157,44 @@
 		C868349E107A687800627B83 /* BaseDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataSource.h; sourceTree = "<group>"; };
 		C868349F107A687800627B83 /* BaseDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataSource.m; sourceTree = "<group>"; };
 		C8999B5D108062B800C4663E /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		C8B54851105C7B0F000BF55D /* address.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = address.jpg; path = ../gfx/out/address.jpg; sourceTree = SOURCE_ROOT; };
-		C8B54852105C7B0F000BF55D /* blank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blank.jpg; path = ../gfx/out/blank.jpg; sourceTree = SOURCE_ROOT; };
+		C8A444C610A7A386006D2A8D /* ARCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCoordinate.h; sourceTree = "<group>"; };
+		C8A444C710A7A386006D2A8D /* ARCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCoordinate.m; sourceTree = "<group>"; };
+		C8A444C810A7A386006D2A8D /* ARGeoCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoCoordinate.h; sourceTree = "<group>"; };
+		C8A444C910A7A386006D2A8D /* ARGeoCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoCoordinate.m; sourceTree = "<group>"; };
+		C8A444CA10A7A386006D2A8D /* ARGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoViewController.h; sourceTree = "<group>"; };
+		C8A444CB10A7A386006D2A8D /* ARGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoViewController.m; sourceTree = "<group>"; };
+		C8A444CC10A7A386006D2A8D /* ARKitDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKitDemoAppDelegate.h; sourceTree = "<group>"; };
+		C8A444CD10A7A386006D2A8D /* ARKitDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARKitDemoAppDelegate.m; sourceTree = "<group>"; };
+		C8A444CE10A7A386006D2A8D /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		C8A444CF10A7A386006D2A8D /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		C8A4450510A7A457006D2A8D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C8A4468510A7BA9D006D2A8D /* button-rollover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-rollover.png"; path = "../gfx/out/button-rollover.png"; sourceTree = SOURCE_ROOT; };
+		C8A4468610A7BA9D006D2A8D /* crime-report.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "crime-report.png"; path = "../gfx/out/crime-report.png"; sourceTree = SOURCE_ROOT; };
+		C8A4468710A7BA9D006D2A8D /* Homescreen-3G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Homescreen-3G.png"; path = "../gfx/out/Homescreen-3G.png"; sourceTree = SOURCE_ROOT; };
+		C8A4468810A7BA9D006D2A8D /* Homescreen-3GS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Homescreen-3GS.png"; path = "../gfx/out/Homescreen-3GS.png"; sourceTree = SOURCE_ROOT; };
+		C8A4468910A7BA9D006D2A8D /* info-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-screen.png"; path = "../gfx/out/info-screen.png"; sourceTree = SOURCE_ROOT; };
+		C8A791CD1094F1E8005A6E41 /* MapOverlayAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverlayAnnotationView.h; sourceTree = "<group>"; };
+		C8A791CE1094F1E8005A6E41 /* MapOverlayAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverlayAnnotationView.m; sourceTree = "<group>"; };
+		C8A791CF1094F1E8005A6E41 /* MapOverlayAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapOverlayAnnotationView.xib; sourceTree = "<group>"; };
+		C8A7922D1094F62F005A6E41 /* OverlayLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayLocation.h; sourceTree = "<group>"; };
+		C8A7922E1094F62F005A6E41 /* OverlayLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayLocation.m; sourceTree = "<group>"; };
+		C8A7935710950640005A6E41 /* NSObject+ShortCategoryName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ShortCategoryName.h"; sourceTree = "<group>"; };
+		C8A7935A10950686005A6E41 /* NSObject+ShortCategoryName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ShortCategoryName.m"; sourceTree = "<group>"; };
+		C8A795D110952FD4005A6E41 /* libYAJLIPhone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYAJLIPhone.a; sourceTree = "<group>"; };
+		C8A795D210952FD4005A6E41 /* NSObject+YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YAJL.h"; sourceTree = "<group>"; };
+		C8A795D310952FD4005A6E41 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
+		C8A795D410952FD4005A6E41 /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_gen.h; sourceTree = "<group>"; };
+		C8A795D510952FD4005A6E41 /* yajl_parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_parse.h; sourceTree = "<group>"; };
+		C8A795D610952FD4005A6E41 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
+		C8A795D710952FD4005A6E41 /* YAJLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJLDocument.h; sourceTree = "<group>"; };
+		C8A795D810952FD4005A6E41 /* YAJLGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJLGen.h; sourceTree = "<group>"; };
+		C8A795D910952FD4005A6E41 /* YAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJLParser.h; sourceTree = "<group>"; };
+		C8A795FA109531E7005A6E41 /* NSObject+StringFromURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+StringFromURL.h"; sourceTree = "<group>"; };
+		C8A795FB109531E7005A6E41 /* NSObject+StringFromURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+StringFromURL.m"; sourceTree = "<group>"; };
 		C8B54853105C7B0F000BF55D /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = home.jpg; path = ../gfx/out/home.jpg; sourceTree = SOURCE_ROOT; };
 		C8B54857105C7B40000BF55D /* EnterAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterAddressViewController.h; sourceTree = "<group>"; };
 		C8B54858105C7B40000BF55D /* EnterAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterAddressViewController.m; sourceTree = "<group>"; };
 		C8B54859105C7B40000BF55D /* EnterAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EnterAddressViewController.xib; path = Classes/EnterAddressViewController.xib; sourceTree = "<group>"; };
-		C8B549D8105C88A0000BF55D /* NSObject+NetworkJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NetworkJSON.h"; sourceTree = "<group>"; };
-		C8B549D9105C88A0000BF55D /* NSObject+NetworkJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NetworkJSON.m"; sourceTree = "<group>"; };
 		C8B54CC0105E14AF000BF55D /* vehicle-theft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vehicle-theft.png"; path = "../gfx/out/vehicle-theft.png"; sourceTree = SOURCE_ROOT; };
 		C8B54D5F105E1ED8000BF55D /* drug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = drug.png; path = ../gfx/out/drug.png; sourceTree = SOURCE_ROOT; };
 		C8B54DBB105E2355000BF55D /* robbery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robbery.png; path = ../gfx/out/robbery.png; sourceTree = SOURCE_ROOT; };
@@ -172,11 +205,18 @@
 		C8B54EC5105E3A81000BF55D /* map-sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-sample.png"; path = "../gfx/out/map-sample.png"; sourceTree = SOURCE_ROOT; };
 		C8B54ECF105E3CD9000BF55D /* burglary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burglary.png; path = ../gfx/out/burglary.png; sourceTree = SOURCE_ROOT; };
 		C8B54EF3105E3FA5000BF55D /* sexoffenses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sexoffenses.png; path = ../gfx/out/sexoffenses.png; sourceTree = SOURCE_ROOT; };
-		C8B54F0C105E488F000BF55D /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = center.png; path = ../gfx/out/center.png; sourceTree = SOURCE_ROOT; };
 		C8B55031105E5966000BF55D /* UIViewController+SanFrancisco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SanFrancisco.h"; sourceTree = "<group>"; };
 		C8B55032105E5966000BF55D /* UIViewController+SanFrancisco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SanFrancisco.m"; sourceTree = "<group>"; };
+		C8C0554A10A88A350088D584 /* menu-assault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-assault.png"; path = "../gfx/out/menu-assault.png"; sourceTree = SOURCE_ROOT; };
+		C8C0554B10A88A350088D584 /* menu-burglary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-burglary.png"; path = "../gfx/out/menu-burglary.png"; sourceTree = SOURCE_ROOT; };
+		C8C0554C10A88A350088D584 /* menu-drug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-drug.png"; path = "../gfx/out/menu-drug.png"; sourceTree = SOURCE_ROOT; };
+		C8C0554D10A88A350088D584 /* menu-larceny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-larceny.png"; path = "../gfx/out/menu-larceny.png"; sourceTree = SOURCE_ROOT; };
+		C8C0554E10A88A350088D584 /* menu-robbery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-robbery.png"; path = "../gfx/out/menu-robbery.png"; sourceTree = SOURCE_ROOT; };
+		C8C0554F10A88A350088D584 /* menu-sexoffenses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-sexoffenses.png"; path = "../gfx/out/menu-sexoffenses.png"; sourceTree = SOURCE_ROOT; };
+		C8C0555010A88A350088D584 /* menu-vandalism.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-vandalism.png"; path = "../gfx/out/menu-vandalism.png"; sourceTree = SOURCE_ROOT; };
+		C8C0555110A88A350088D584 /* menu-vehicle-theft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-vehicle-theft.png"; path = "../gfx/out/menu-vehicle-theft.png"; sourceTree = SOURCE_ROOT; };
 		C8F61C63105E6B48007F3252 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		C8F61D49105E7188007F3252 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C8F68BB61080923F00799BEE /* sfinfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfinfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +230,9 @@
 				C83D1E0E104B20FC0048B36B /* MapKit.framework in Frameworks */,
 				C83D22E0104B58AD0048B36B /* CoreLocation.framework in Frameworks */,
 				C8F61C64105E6B48007F3252 /* MessageUI.framework in Frameworks */,
+				C855B562108DAECD00ADB1DA /* SystemConfiguration.framework in Frameworks */,
+				C8A795DA10952FD4005A6E41 /* libYAJLIPhone.a in Frameworks */,
+				C8A4450610A7A457006D2A8D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +257,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* sfinfo.app */,
+				C8F68BB61080923F00799BEE /* sfinfo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +270,6 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				C8999B5D108062B800C4663E /* Entitlements.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -260,23 +302,10 @@
 				C83D1E0D104B20FC0048B36B /* MapKit.framework */,
 				C8F61C63105E6B48007F3252 /* MessageUI.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				C855B561108DAECD00ADB1DA /* SystemConfiguration.framework */,
+				C8A4450510A7A457006D2A8D /* QuartzCore.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C80601A7104E45FB006AA19D /* ARKIt */ = {
-			isa = PBXGroup;
-			children = (
-				C80601A8104E45FB006AA19D /* ARCoordinate.h */,
-				C80601A9104E45FB006AA19D /* ARCoordinate.m */,
-				C80601AA104E45FB006AA19D /* ARViewController.h */,
-				C80601AB104E45FB006AA19D /* ARViewController.m */,
-				C80601AC104E45FB006AA19D /* ARGeoCoordinate.h */,
-				C80601AD104E45FB006AA19D /* ARGeoCoordinate.m */,
-				C80601AE104E45FB006AA19D /* ARGeoViewController.h */,
-				C80601AF104E45FB006AA19D /* ARGeoViewController.m */,
-			);
-			name = ARKIt;
 			sourceTree = "<group>";
 		};
 		C81FDA80107B0BA200CEDB9E /* Views */ = {
@@ -286,28 +315,6 @@
 				C81FDA82107B0BB800CEDB9E /* ARCoordinateView.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		C85BB5C6104B1E7800341D62 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				C85BB5C7104B1E7800341D62 /* JSON.h */,
-				C85BB5C8104B1E7800341D62 /* NSObject+SBJSON.h */,
-				C85BB5C9104B1E7800341D62 /* NSObject+SBJSON.m */,
-				C85BB5CA104B1E7800341D62 /* NSString+SBJSON.h */,
-				C85BB5CB104B1E7800341D62 /* NSString+SBJSON.m */,
-				C85BB5CC104B1E7800341D62 /* SBJSON.h */,
-				C85BB5CD104B1E7800341D62 /* SBJSON.m */,
-				C85BB5CE104B1E7800341D62 /* SBJsonBase.h */,
-				C85BB5CF104B1E7800341D62 /* SBJsonBase.m */,
-				C85BB5D0104B1E7800341D62 /* SBJsonParser.h */,
-				C85BB5D1104B1E7800341D62 /* SBJsonParser.m */,
-				C85BB5D2104B1E7800341D62 /* SBJsonWriter.h */,
-				C85BB5D3104B1E7800341D62 /* SBJsonWriter.m */,
-				C8B549D8105C88A0000BF55D /* NSObject+NetworkJSON.h */,
-				C8B549D9105C88A0000BF55D /* NSObject+NetworkJSON.m */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		C86833701079EB7600627B83 /* View Controllers */ = {
@@ -331,6 +338,11 @@
 				C83D2549104B92BE0048B36B /* MapFilterViewController.m */,
 				C8682EFD107994F300627B83 /* NeighborhoodPickerViewControler.h */,
 				C8682EFE107994F300627B83 /* NeighborhoodPickerViewControler.m */,
+				C855B3E0108D9C3D00ADB1DA /* CreditsViewController.h */,
+				C855B3E1108D9C3D00ADB1DA /* CreditsViewController.m */,
+				C8A791CD1094F1E8005A6E41 /* MapOverlayAnnotationView.h */,
+				C8A791CE1094F1E8005A6E41 /* MapOverlayAnnotationView.m */,
+				C8A791CF1094F1E8005A6E41 /* MapOverlayAnnotationView.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -342,6 +354,8 @@
 				C83D1E85104B25490048B36B /* InfoLocation.m */,
 				C868320E1079DCC600627B83 /* Neighborhood.h */,
 				C868320F1079DCC600627B83 /* Neighborhood.m */,
+				C8A7922D1094F62F005A6E41 /* OverlayLocation.h */,
+				C8A7922E1094F62F005A6E41 /* OverlayLocation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -355,6 +369,10 @@
 				C83D23B1104B65520048B36B /* LocationCallerDelegate.h */,
 				C8B55031105E5966000BF55D /* UIViewController+SanFrancisco.h */,
 				C8B55032105E5966000BF55D /* UIViewController+SanFrancisco.m */,
+				C8A7935710950640005A6E41 /* NSObject+ShortCategoryName.h */,
+				C8A7935A10950686005A6E41 /* NSObject+ShortCategoryName.m */,
+				C8A795FA109531E7005A6E41 /* NSObject+StringFromURL.h */,
+				C8A795FB109531E7005A6E41 /* NSObject+StringFromURL.m */,
 			);
 			name = "Protocols and Categories";
 			sourceTree = "<group>";
@@ -375,8 +393,8 @@
 		C86833931079EC3B00627B83 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				C80601A7104E45FB006AA19D /* ARKIt */,
-				C85BB5C6104B1E7800341D62 /* JSON */,
+				C8A444C510A7A37C006D2A8D /* ARKit */,
+				C8A795CC10952FC2005A6E41 /* YAJL */,
 			);
 			name = External;
 			sourceTree = "<group>";
@@ -385,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				C81FDA5F107B060700CEDB9E /* ARCoordinateView.xib */,
+				C855B3E2108D9C3D00ADB1DA /* CreditsViewController.xib */,
 				C83D20D4104B3D6C0048B36B /* InfoLocationDetailViewController.xib */,
 				2899E5210DE3E06400AC0155 /* InfoMapViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -402,20 +421,69 @@
 		C86833971079EC6600627B83 /* Plists */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107310486CEB800E47090 /* sfinfo-Info.plist */,
+				C8999B5D108062B800C4663E /* Entitlements.plist */,
+				8D1107310486CEB800E47090 /* Info.plist */,
 				C8682FD31079A55900627B83 /* neighborhoods.plist */,
 				C868302B1079B31200627B83 /* appconfig.plist */,
 			);
 			name = Plists;
 			sourceTree = "<group>";
 		};
+		C8A444C510A7A37C006D2A8D /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				C8A444C610A7A386006D2A8D /* ARCoordinate.h */,
+				C8A444C710A7A386006D2A8D /* ARCoordinate.m */,
+				C8A444C810A7A386006D2A8D /* ARGeoCoordinate.h */,
+				C8A444C910A7A386006D2A8D /* ARGeoCoordinate.m */,
+				C8A444CA10A7A386006D2A8D /* ARGeoViewController.h */,
+				C8A444CB10A7A386006D2A8D /* ARGeoViewController.m */,
+				C8A444CC10A7A386006D2A8D /* ARKitDemoAppDelegate.h */,
+				C8A444CD10A7A386006D2A8D /* ARKitDemoAppDelegate.m */,
+				C8A444CE10A7A386006D2A8D /* ARViewController.h */,
+				C8A444CF10A7A386006D2A8D /* ARViewController.m */,
+			);
+			name = ARKit;
+			sourceTree = "<group>";
+		};
+		C8A795CC10952FC2005A6E41 /* YAJL */ = {
+			isa = PBXGroup;
+			children = (
+				C8A795D110952FD4005A6E41 /* libYAJLIPhone.a */,
+				C8A795D210952FD4005A6E41 /* NSObject+YAJL.h */,
+				C8A795D310952FD4005A6E41 /* yajl_common.h */,
+				C8A795D410952FD4005A6E41 /* yajl_gen.h */,
+				C8A795D510952FD4005A6E41 /* yajl_parse.h */,
+				C8A795D610952FD4005A6E41 /* YAJL.h */,
+				C8A795D710952FD4005A6E41 /* YAJLDocument.h */,
+				C8A795D810952FD4005A6E41 /* YAJLGen.h */,
+				C8A795D910952FD4005A6E41 /* YAJLParser.h */,
+			);
+			name = YAJL;
+			sourceTree = "<group>";
+		};
 		C8B54850105C7AFD000BF55D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C81FDA6D107B0A1F00CEDB9E /* arbackground.png */,
-				C83D221C104B4F830048B36B /* filefolder.png */,
-				C8F61D49105E7188007F3252 /* Icon.png */,
-				C8B54F0C105E488F000BF55D /* center.png */,
+				C804C24410A946D100C284FF /* crime-report-rotated.png */,
+				C804C1DA10A93CD000C284FF /* arcoordinateview.png */,
+				C804C1C910A93C1000C284FF /* Icon.png */,
+				C804C18910A938DE00C284FF /* Homescreen-blank.png */,
+				C804C0D910A92A8200C284FF /* paper-scrap.png */,
+				C8C0554A10A88A350088D584 /* menu-assault.png */,
+				C8C0554B10A88A350088D584 /* menu-burglary.png */,
+				C8C0554C10A88A350088D584 /* menu-drug.png */,
+				C8C0554D10A88A350088D584 /* menu-larceny.png */,
+				C8C0554E10A88A350088D584 /* menu-robbery.png */,
+				C8C0554F10A88A350088D584 /* menu-sexoffenses.png */,
+				C8C0555010A88A350088D584 /* menu-vandalism.png */,
+				C8C0555110A88A350088D584 /* menu-vehicle-theft.png */,
+				C8A4468510A7BA9D006D2A8D /* button-rollover.png */,
+				C8A4468610A7BA9D006D2A8D /* crime-report.png */,
+				C8A4468710A7BA9D006D2A8D /* Homescreen-3G.png */,
+				C8A4468810A7BA9D006D2A8D /* Homescreen-3GS.png */,
+				C8A4468910A7BA9D006D2A8D /* info-screen.png */,
+				C855B36A108D962A00ADB1DA /* home-highlight.png */,
 				C8B54EF3105E3FA5000BF55D /* sexoffenses.png */,
 				C8B54ECF105E3CD9000BF55D /* burglary.png */,
 				C8B54EC5105E3A81000BF55D /* map-sample.png */,
@@ -425,8 +493,6 @@
 				C8B54DBB105E2355000BF55D /* robbery.png */,
 				C8B54D5F105E1ED8000BF55D /* drug.png */,
 				C8B54CC0105E14AF000BF55D /* vehicle-theft.png */,
-				C8B54851105C7B0F000BF55D /* address.jpg */,
-				C8B54852105C7B0F000BF55D /* blank.jpg */,
 				C8B54853105C7B0F000BF55D /* home.jpg */,
 			);
 			name = Images;
@@ -449,7 +515,7 @@
 			);
 			name = sfinfo;
 			productName = sfinfo;
-			productReference = 1D6058910D05DD3D006BFB54 /* sfinfo.app */;
+			productReference = C8F68BB61080923F00799BEE /* sfinfo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -477,13 +543,10 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* InfoMapViewController.xib in Resources */,
 				C83D20D6104B3D6C0048B36B /* InfoLocationDetailViewController.xib in Resources */,
-				C83D221D104B4F830048B36B /* filefolder.png in Resources */,
 				C83D2232104B522B0048B36B /* MainMenuViewController.xib in Resources */,
 				C83D22B6104B57870048B36B /* FindMeViewController.xib in Resources */,
 				C83D254C104B92BE0048B36B /* MapFilterViewController.xib in Resources */,
 				C806022D104E4A43006AA19D /* AugmentedRealityViewController.xib in Resources */,
-				C8B54854105C7B0F000BF55D /* address.jpg in Resources */,
-				C8B54855105C7B0F000BF55D /* blank.jpg in Resources */,
 				C8B54856105C7B0F000BF55D /* home.jpg in Resources */,
 				C8B5485B105C7B40000BF55D /* EnterAddressViewController.xib in Resources */,
 				C8B54CC1105E14AF000BF55D /* vehicle-theft.png in Resources */,
@@ -496,15 +559,33 @@
 				C8B54EC6105E3A81000BF55D /* map-sample.png in Resources */,
 				C8B54ED0105E3CD9000BF55D /* burglary.png in Resources */,
 				C8B54EF4105E3FA5000BF55D /* sexoffenses.png in Resources */,
-				C8B54F0D105E488F000BF55D /* center.png in Resources */,
-				C8F61D4A105E7188007F3252 /* Icon.png in Resources */,
 				C8682F01107994F300627B83 /* NeighborhoodPickerViewControler.xib in Resources */,
 				C8682FD41079A55900627B83 /* neighborhoods.plist in Resources */,
 				C868302C1079B31200627B83 /* appconfig.plist in Resources */,
 				C868305A1079C21100627B83 /* InfoLocationDataSource.h in Resources */,
 				C81FDA60107B060700CEDB9E /* ARCoordinateView.xib in Resources */,
-				C81FDA6E107B0A1F00CEDB9E /* arbackground.png in Resources */,
 				C8999B5E108062B800C4663E /* Entitlements.plist in Resources */,
+				C855B36B108D962A00ADB1DA /* home-highlight.png in Resources */,
+				C855B3E4108D9C3D00ADB1DA /* CreditsViewController.xib in Resources */,
+				C8A791D11094F1E8005A6E41 /* MapOverlayAnnotationView.xib in Resources */,
+				C8A4468A10A7BA9D006D2A8D /* button-rollover.png in Resources */,
+				C8A4468B10A7BA9D006D2A8D /* crime-report.png in Resources */,
+				C8A4468C10A7BA9D006D2A8D /* Homescreen-3G.png in Resources */,
+				C8A4468D10A7BA9D006D2A8D /* Homescreen-3GS.png in Resources */,
+				C8A4468E10A7BA9D006D2A8D /* info-screen.png in Resources */,
+				C8C0555210A88A350088D584 /* menu-assault.png in Resources */,
+				C8C0555310A88A350088D584 /* menu-burglary.png in Resources */,
+				C8C0555410A88A350088D584 /* menu-drug.png in Resources */,
+				C8C0555510A88A350088D584 /* menu-larceny.png in Resources */,
+				C8C0555610A88A350088D584 /* menu-robbery.png in Resources */,
+				C8C0555710A88A350088D584 /* menu-sexoffenses.png in Resources */,
+				C8C0555810A88A350088D584 /* menu-vandalism.png in Resources */,
+				C8C0555910A88A350088D584 /* menu-vehicle-theft.png in Resources */,
+				C804C0DA10A92A8200C284FF /* paper-scrap.png in Resources */,
+				C804C18A10A938DE00C284FF /* Homescreen-blank.png in Resources */,
+				C804C1CA10A93C1000C284FF /* Icon.png in Resources */,
+				C804C1DB10A93CD000C284FF /* arcoordinateview.png in Resources */,
+				C804C24510A946D100C284FF /* crime-report-rotated.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,25 +599,14 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* sfinfoAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* InfoMapViewController.m in Sources */,
-				C85BB5D4104B1E7800341D62 /* NSObject+SBJSON.m in Sources */,
-				C85BB5D5104B1E7800341D62 /* NSString+SBJSON.m in Sources */,
-				C85BB5D6104B1E7800341D62 /* SBJSON.m in Sources */,
-				C85BB5D7104B1E7800341D62 /* SBJsonBase.m in Sources */,
-				C85BB5D8104B1E7800341D62 /* SBJsonParser.m in Sources */,
-				C85BB5D9104B1E7800341D62 /* SBJsonWriter.m in Sources */,
 				C83D1E86104B25490048B36B /* InfoLocation.m in Sources */,
 				C83D20D5104B3D6C0048B36B /* InfoLocationDetailViewController.m in Sources */,
 				C83D20FE104B40640048B36B /* InfoLocationAnnotationView.m in Sources */,
 				C83D2231104B522B0048B36B /* MainMenuViewController.m in Sources */,
 				C83D22B5104B57870048B36B /* FindMeViewController.m in Sources */,
 				C83D254B104B92BE0048B36B /* MapFilterViewController.m in Sources */,
-				C80601B0104E45FB006AA19D /* ARCoordinate.m in Sources */,
-				C80601B1104E45FB006AA19D /* ARViewController.m in Sources */,
-				C80601B2104E45FB006AA19D /* ARGeoCoordinate.m in Sources */,
-				C80601B3104E45FB006AA19D /* ARGeoViewController.m in Sources */,
 				C80601B6104E4609006AA19D /* AugmentedRealityViewController.m in Sources */,
 				C8B5485A105C7B40000BF55D /* EnterAddressViewController.m in Sources */,
-				C8B549DA105C88A0000BF55D /* NSObject+NetworkJSON.m in Sources */,
 				C8B55033105E5966000BF55D /* UIViewController+SanFrancisco.m in Sources */,
 				C8682F00107994F300627B83 /* NeighborhoodPickerViewControler.m in Sources */,
 				C86830581079C15300627B83 /* ByCoordinateDataSource.m in Sources */,
@@ -544,6 +614,16 @@
 				C86832101079DCC600627B83 /* Neighborhood.m in Sources */,
 				C86834A0107A687800627B83 /* BaseDataSource.m in Sources */,
 				C81FDA83107B0BB800CEDB9E /* ARCoordinateView.m in Sources */,
+				C855B3E3108D9C3D00ADB1DA /* CreditsViewController.m in Sources */,
+				C8A791D01094F1E8005A6E41 /* MapOverlayAnnotationView.m in Sources */,
+				C8A7922F1094F62F005A6E41 /* OverlayLocation.m in Sources */,
+				C8A7935B10950686005A6E41 /* NSObject+ShortCategoryName.m in Sources */,
+				C8A795FC109531E7005A6E41 /* NSObject+StringFromURL.m in Sources */,
+				C8A444D010A7A386006D2A8D /* ARCoordinate.m in Sources */,
+				C8A444D110A7A386006D2A8D /* ARGeoCoordinate.m in Sources */,
+				C8A444D210A7A386006D2A8D /* ARGeoViewController.m in Sources */,
+				C8A444D310A7A386006D2A8D /* ARKitDemoAppDelegate.m in Sources */,
+				C8A444D410A7A386006D2A8D /* ARViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +639,15 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = sfinfo_Prefix.pch;
-				INFOPLIST_FILE = "sfinfo-Info.plist";
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = sfinfo;
 			};
 			name = Debug;
@@ -571,7 +659,15 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = sfinfo_Prefix.pch;
-				INFOPLIST_FILE = "sfinfo-Info.plist";
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = sfinfo;
 			};
 			name = Release;
@@ -580,11 +676,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Krieger (K83UG6RS57)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EB2F6FC-5B4E-4886-ABC0-D6141456891B";
 				SDKROOT = iphoneos3.1;
 			};
 			name = Debug;
@@ -593,29 +690,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Krieger (K83UG6RS57)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EB2F6FC-5B4E-4886-ABC0-D6141456891B";
 				SDKROOT = iphoneos3.1;
 			};
 			name = Release;
 		};
-		C8999B401080624100C4663E /* Distribution */ = {
+		C804C27510A9564C00C284FF /* App Store Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Krieger (K83UG6RS57)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EB2F6FC-5B4E-4886-ABC0-D6141456891B";
 				SDKROOT = iphoneos3.1;
 			};
-			name = Distribution;
+			name = "App Store Distribution";
 		};
-		C8999B411080624100C4663E /* Distribution */ = {
+		C804C27610A9564C00C284FF /* App Store Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -624,11 +723,52 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = sfinfo_Prefix.pch;
-				INFOPLIST_FILE = "sfinfo-Info.plist";
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = sfinfo;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B9D857D9-5DFB-4825-9BEF-4767DF90DE2A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8B2806E-35A6-43D1-AD81-9285FE80D253";
 			};
-			name = Distribution;
+			name = "App Store Distribution";
+		};
+		C8999B401080624100C4663E /* Ad hocDistribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mike Krieger (K83UG6RS57)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EB2F6FC-5B4E-4886-ABC0-D6141456891B";
+				SDKROOT = iphoneos3.1;
+			};
+			name = "Ad hocDistribution";
+		};
+		C8999B411080624100C4663E /* Ad hocDistribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mike Krieger";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = sfinfo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+				);
+				PRODUCT_NAME = sfinfo;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E316E217-93D8-4998-AB8B-755AC2BDD235";
+			};
+			name = "Ad hocDistribution";
 		};
 /* End XCBuildConfiguration section */
 
@@ -638,7 +778,8 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
-				C8999B411080624100C4663E /* Distribution */,
+				C8999B411080624100C4663E /* Ad hocDistribution */,
+				C804C27610A9564C00C284FF /* App Store Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -648,7 +789,8 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-				C8999B401080624100C4663E /* Distribution */,
+				C8999B401080624100C4663E /* Ad hocDistribution */,
+				C804C27510A9564C00C284FF /* App Store Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
