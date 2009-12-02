@@ -88,7 +88,7 @@
     [thisSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     
     
-    [[cell imageView] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [self shortNameForCategory:category]]]];
+    [[cell imageView] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"menu-%@.png", [self shortNameForCategory:category]]]];
     
     [[cell textLabel] setFont:[UIFont fontWithName:@"American Typewriter" size:15.0]];
 
