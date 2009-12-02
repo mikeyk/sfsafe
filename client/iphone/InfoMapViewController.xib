@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">784</int>
-		<string key="IBDocument.SystemVersion">10A432</string>
+		<string key="IBDocument.SystemVersion">10B504</string>
 		<string key="IBDocument.InterfaceBuilderVersion">732</string>
-		<string key="IBDocument.AppKitVersion">1038</string>
+		<string key="IBDocument.AppKitVersion">1038.2</string>
 		<string key="IBDocument.HIToolboxVersion">437.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="23"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -59,15 +59,20 @@
 								<reference key="IBUIToolbar" ref="957665738"/>
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
-							<object class="IBUIBarButtonItem" id="551635131">
-								<string key="IBUITitle">Filter</string>
-								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="957665738"/>
-							</object>
 							<object class="IBUIBarButtonItem" id="322397829">
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="957665738"/>
 								<int key="IBUISystemItemIdentifier">5</int>
+							</object>
+							<object class="IBUIBarButtonItem" id="676520751">
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="957665738"/>
+								<int key="IBUISystemItemIdentifier">5</int>
+							</object>
+							<object class="IBUIBarButtonItem" id="551635131">
+								<string key="IBUITitle">Filter</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="957665738"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="551291062">
 								<int key="IBUIStyle">1</int>
@@ -81,6 +86,10 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 416}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<object class="NSColor" key="IBUIBackgroundColor" id="309369855">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwAA</bytes>
+						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -94,16 +103,18 @@
 							<object class="IBUILabel" id="753259115">
 								<reference key="NSNextResponder" ref="878672864"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{36, 11}, {91, 21}}</string>
+								<string key="NSFrame">{{36, 4}, {102, 22}}</string>
 								<reference key="NSSuperview" ref="878672864"/>
-								<object class="NSColor" key="IBUIBackgroundColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MCAwAA</bytes>
-								</object>
+								<reference key="IBUIBackgroundColor" ref="309369855"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">Searching...</string>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">17</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
@@ -118,7 +129,7 @@
 							<object class="IBUIActivityIndicatorView" id="726848283">
 								<reference key="NSNextResponder" ref="878672864"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{9, 11}, {20, 20}}</string>
+								<string key="NSFrame">{{9, 6}, {20, 20}}</string>
 								<reference key="NSSuperview" ref="878672864"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -127,15 +138,15 @@
 								<bool key="IBUIAnimating">YES</bool>
 							</object>
 						</object>
-						<string key="NSFrame">{{179, 378}, {142, 39}}</string>
+						<string key="NSFrame">{{58, 422}, {124, 33}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC4yNQA</bytes>
+							<bytes key="NSWhite">MC4yNSAwAA</bytes>
 							<reference key="NSCustomColorSpace" ref="135471460"/>
 						</object>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-						<float key="IBUIAlpha">0.80985915660858154</float>
+						<float key="IBUIAlpha">0.89999997615814209</float>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -244,10 +255,11 @@
 						<reference key="object" ref="957665738"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="322397829"/>
-							<reference ref="268692527"/>
 							<reference ref="551291062"/>
 							<reference ref="154440184"/>
+							<reference ref="268692527"/>
+							<reference ref="676520751"/>
+							<reference ref="322397829"/>
 							<reference ref="551635131"/>
 						</object>
 						<reference key="parent" ref="774585933"/>
@@ -255,11 +267,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
 						<reference key="object" ref="551635131"/>
-						<reference key="parent" ref="957665738"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">13</int>
-						<reference key="object" ref="322397829"/>
 						<reference key="parent" ref="957665738"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -283,14 +290,24 @@
 						<reference key="parent" ref="957665738"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">39</int>
+						<reference key="object" ref="676520751"/>
+						<reference key="parent" ref="957665738"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
 						<reference key="object" ref="878672864"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="726848283"/>
 							<reference ref="753259115"/>
+							<reference ref="726848283"/>
 						</object>
 						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">34</int>
+						<reference key="object" ref="753259115"/>
+						<reference key="parent" ref="878672864"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">32</int>
@@ -298,9 +315,9 @@
 						<reference key="parent" ref="878672864"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">34</int>
-						<reference key="object" ref="753259115"/>
-						<reference key="parent" ref="878672864"/>
+						<int key="objectID">13</int>
+						<reference key="object" ref="322397829"/>
+						<reference key="parent" ref="957665738"/>
 					</object>
 				</object>
 			</object>
@@ -319,6 +336,7 @@
 					<string>30.IBPluginDependency</string>
 					<string>32.IBPluginDependency</string>
 					<string>34.IBPluginDependency</string>
+					<string>39.IBPluginDependency</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -336,7 +354,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{362, 330}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{300, 330}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -357,7 +376,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">35</int>
+			<int key="maxID">39</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -410,21 +429,21 @@
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/JSON/NSObject+NetworkJSON.h</string>
+						<string key="minorKey">Classes/NSObject+ShortCategoryName.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/JSON/NSObject+SBJSON.h</string>
+						<string key="minorKey">Classes/NSObject+StringFromURL.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/JSON/SBJsonWriter.h</string>
+						<string key="minorKey">Classes/NSObject+YAJL.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -541,6 +560,20 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSXMLParser.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzCore.framework/Headers/CAAnimation.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzCore.framework/Headers/CALayer.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

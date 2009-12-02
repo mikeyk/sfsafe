@@ -32,7 +32,8 @@
     [message_ setBackgroundColor:[UIColor colorWithWhite:0.250 alpha:1.000]];
     UILabel * messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 310, 20)];
     [messageLabel setBackgroundColor:[UIColor clearColor]];
-    [message_ setAlpha:0.75];
+    [message_ setAlpha:0.9];
+    [messageLabel setFont:[UIFont fontWithName:@"American Typewriter" size:14.0]];
     [messageLabel setTextColor:[UIColor whiteColor]];
     [messageLabel setAdjustsFontSizeToFitWidth:YES];
     [messageLabel setText:messageText];
@@ -306,7 +307,7 @@
         [picker setSubject:@"Check out this SF map"];
         NSString * shortUrl = [NSString stringWithFormat:@"crimedesksf://location?%f&%f", [[self mainMapView] centerCoordinate].latitude, [[self mainMapView] centerCoordinate].longitude];
         NSString * gmapsLink = [NSString stringWithFormat:@"http://maps.google.com/maps?f=qhl=en&q=%f,%f", [[self mainMapView] centerCoordinate].latitude, [[self mainMapView] centerCoordinate].longitude]; 
-        NSString * messageBody = [NSString stringWithFormat:@"Hey,\nI was looking at the safety information for this location in the Crime Desk SF iPhone app and thought you might want to see it.<br/><br/><a href='%@'>Click to see it in Crime Desk SF</a>, or <a href='%@'>get Crime Desk SF free on the App Store</a>. <br/>You can also see just the location in <a href='%@'>Google Maps</a><br/><br/>-Your name", shortUrl, @"http://appstorelink.com", gmapsLink];
+        NSString * messageBody = [NSString stringWithFormat:@"Hey,\nI was looking at the safety information for this location in the Crime Desk SF iPhone app and thought you might want to see it.<br/><br/><a href='%@'>Click to see it in Crime Desk SF</a>, or <a href='%@'>get Crime Desk SF free on the App Store</a>. <br/>You can also see just the location in <a href='%@'>Google Maps</a><br/><br/>-Your name", shortUrl, @"http://mkrieger.org/crimedeskappstore/", gmapsLink];
         NSLog(@"%@", messageBody);
         [picker setMessageBody:messageBody isHTML:YES];
         [self presentModalViewController:picker animated:YES];
