@@ -126,9 +126,7 @@
     }
     NSString * neighborhoodName = [[[neighborhoods objectAtIndex:[indexPath section]] objectAtIndex:[indexPath row]] name];
     [[cell textLabel] setText:neighborhoodName];
-    [[cell textLabel] setFont:[UIFont fontWithName:@"American Typewriter" size:20.0]];
-    // Set up the cell...
-	
+    [[cell textLabel] setFont:[UIFont fontWithName:@"American Typewriter" size:20.0]];	
     return cell;
 }
 
@@ -150,12 +148,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Neighborhood * neighborhood = [[neighborhoods objectAtIndex:[indexPath section]] objectAtIndex:[indexPath row]];
-    ByNeighborhoodDataSource * bnDS = [[ByNeighborhoodDataSource alloc] init];
-    [bnDS setNeighborhood:neighborhood];
-    InfoMapViewController * imVC = [[InfoMapViewController alloc] initWithNibName:@"InfoMapViewController" bundle:[NSBundle mainBundle] mapCenter:[neighborhood coord] dataSource:bnDS];
-    [bnDS release];
+    ByCoordinateDataSource * dataSource = [[ByCoordinateDataSource alloc] init];
+//    [bcDS setNeighborhood:neighborhood];
+    InfoMapViewController * imVC = [[InfoMapViewController alloc] initWithNibName:@"InfoMapViewController" bundle:[NSBundle mainBundle] mapCenter:[neighborhood coord] dataSource:dataSource];
+    [dataSource release];
     [[self navigationController] pushViewController:imVC animated:YES];
     [imVC release];
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];    
 }
 
 
