@@ -16,12 +16,14 @@
 
 @interface MainMenuViewController : UIViewController <LocationCallerDelegate> {
     IBOutlet UIImageView * augmentedButtonOverlay;
+    IBOutlet UILabel * usesCameraLabel;
     IBOutlet UIButton * goAugmentedButton;
     CreditsViewController * cVC;
+    IBOutlet UIImageView * backgroundImage;
 }
 
 @property (retain) CreditsViewController * cVC;
-
+@property (retain)  UIImageView * backgroundImage;
 - (IBAction) showCredits;
 - (IBAction) goCurrentLocationMap;
 - (IBAction) goEnterAddress;

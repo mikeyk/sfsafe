@@ -11,7 +11,7 @@
 @implementation MainMenuViewController
 
 @synthesize cVC;
-
+@synthesize backgroundImage;
 
 - (IBAction) showCredits
 {
@@ -24,7 +24,6 @@
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view.superview cache:YES];
     
     UIView *parent = self.view.superview;
-    //[self.view removeFromSuperview];
     
     [parent addSubview:[cVC view]];
     [[cVC backHomeButton] addTarget:self action:@selector(hideCredits) forControlEvents:UIControlEventTouchUpInside];
@@ -68,11 +67,19 @@
 }
 
 - (IBAction) goAugmented {
-    FindMeViewController * fmVC = [[FindMeViewController alloc] initWithNibName:@"FindMeViewController" bundle:[NSBundle mainBundle]];
-    [fmVC setDelegate:self];
-    [fmVC setCallback:@selector(foundLocationForAR:)];
-    [fmVC setOnError:@selector(couldNotFindLocation:)];
-    [self presentModalViewController:fmVC animated:NO];
+    CLLocationManager * locationManager = [[CLLocationManager alloc] init];
+	if (![locationManager headingAvailable]) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Requires 3GS" message:@"This feature requires an iPhone with a compass like the 3GS." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        [alert show];
+        [alert release];        
+    } else {
+        FindMeViewController * fmVC = [[FindMeViewController alloc] initWithNibName:@"FindMeViewController" bundle:[NSBundle mainBundle]];
+        [fmVC setDelegate:self];
+        [fmVC setCallback:@selector(foundLocationForAR:)];
+        [fmVC setOnError:@selector(couldNotFindLocation:)];
+        [self presentModalViewController:fmVC animated:NO];        
+    }
+    [locationManager release];
 }
 
 - (IBAction) goEnterAddress {
@@ -111,9 +118,9 @@
 -(void) viewDidLoad {
 	CLLocationManager * locationManager = [[CLLocationManager alloc] init];
 	// check if the hardware has a compass
-	if ([locationManager headingAvailable]) {
-        [augmentedButtonOverlay removeFromSuperview];
-        [goAugmentedButton setEnabled:YES];
+	if (![locationManager headingAvailable]) {
+        [usesCameraLabel setEnabled:NO];
+        [backgroundImage setImage:[UIImage imageNamed:@"Homescreen-3G.png"]];
     }
     [locationManager release];
 }

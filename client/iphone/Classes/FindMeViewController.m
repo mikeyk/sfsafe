@@ -61,14 +61,18 @@
         coord.latitude = 50.757556;
         coord.longitude = -122.394334;
 #endif
-
+        [[self locationManager] stopUpdatingLocation];
+        
         if (![self isInSanFrancisco:coord]){
             if ([self shouldCorrectLocation]) {
                 coord.latitude = CITYCENTERLAT;
                 coord.longitude = CITYCENTERLON;
             } else{
-                [delegate performSelector:onError withObject:@"It doesn't look like you're in SF, and this feature requires an SF location to work."];
-                return;
+                if (!receivedOneGoodLocation) {                
+                    [delegate performSelector:onError withObject:@"It doesn't look like you're in SF, and this feature requires an SF location to work."];
+                    [self setReceivedOneGoodLocation:YES];
+                    return;
+                }
             }
         }
         CLLocation * correctedLocation = [[CLLocation alloc] initWithCoordinate:coord altitude:[newLocation altitude] horizontalAccuracy:[newLocation horizontalAccuracy] verticalAccuracy:[newLocation verticalAccuracy] timestamp:[newLocation timestamp]];
