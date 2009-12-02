@@ -32,6 +32,8 @@
 
 @synthesize cameraController;
 
+@synthesize statusIndicator;
+
 - (id)init {
 	if (!(self = [super init])) return nil;
 	
@@ -46,8 +48,6 @@
 	_updateTimer = nil;
 	self.updateFrequency = 1 / 20.0;
 	
-#if !TARGET_IPHONE_SIMULATOR
-	
 	self.cameraController = [[[UIImagePickerController alloc] init] autorelease];
 	self.cameraController.sourceType = UIImagePickerControllerSourceTypeCamera;
 	
@@ -56,8 +56,8 @@
 																	   1.13f);
 	
 	self.cameraController.showsCameraControls = NO;
-	self.cameraController.navigationBarHidden = YES;
-#endif
+	self.cameraController.navigationBarHidden = NO;
+
 	self.scaleViewsBasedOnDistance = NO;
 	self.maximumScaleDistance = 0.0;
 	self.minimumScaleFactor = 1.0;
@@ -66,7 +66,7 @@
 	self.maximumRotationAngle = M_PI / 6.0;
 	
 	self.wantsFullScreenLayout = YES;
-	
+	NSLog(@"AR INIT!");
 	return self;
 }
 
@@ -85,6 +85,7 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+    NSLog(@"did load view");
 	[ar_overlayView release];
 	ar_overlayView = [[UIView alloc] initWithFrame:CGRectZero];
 	
@@ -316,12 +317,15 @@ NSComparisonResult LocationSortClosestFirst(ARCoordinate *s1, ARCoordinate *s2, 
 	//update locations!
 	
 	if (!ar_coordinateViews || ar_coordinateViews.count == 0) {
+        [[self statusIndicator] setHidden:NO];
         ar_debugView.text = @"No locations...";
 		return;
-	}
+	} 
+    
+    [[self statusIndicator] setHidden:YES];
+    
 	
 	ar_debugView.text = [self.centerCoordinate description];
-    NSLog(@"Getting ready to display coordinate views");
 	int index = 0;
 	for (ARCoordinate *item in ar_coordinates) {
 		
@@ -365,13 +369,11 @@ NSComparisonResult LocationSortClosestFirst(ARCoordinate *s1, ARCoordinate *s2, 
 			
 			//if we don't have a superview, set it up.
 			if (!(viewToDraw.superview)) {
-                NSLog(@"Didn't have a superview, making one");
 				[ar_overlayView addSubview:viewToDraw];
 				[ar_overlayView sendSubviewToBack:viewToDraw];
 			}
 			
 		} else {
-            NSLog(@"Removing form superview");
 			[viewToDraw removeFromSuperview];
 			viewToDraw.transform = CGAffineTransformIdentity;
 		}
@@ -413,13 +415,39 @@ NSComparisonResult LocationSortClosestFirst(ARCoordinate *s1, ARCoordinate *s2, 
 	}
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-#if !TARGET_IPHONE_SIMULATOR
-	[self.cameraController setCameraOverlayView:ar_overlayView];
-	[self presentModalViewController:self.cameraController animated:NO];
+- (void) setStatus:(NSString *) status {
+    for (UIView *view in statusIndicator.subviews) {
+        [view removeFromSuperview];
+    }
+    UILabel * statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 20)];
+    [statusLabel setText:status];
+    [statusLabel setBackgroundColor:[UIColor clearColor]];
+    [statusLabel setTextColor:[UIColor whiteColor]];
+    [statusIndicator addSubview:statusLabel];
+    [statusLabel release];
+}
+
+
+- (void) viewDidAppear:(BOOL)animated {
+	//[super viewDidAppear:animated];    
+
+	[[self navigationController] presentModalViewController:self.cameraController animated:NO];
 	
-	[ar_overlayView setFrame:self.cameraController.view.bounds];
-#endif
+	//[ar_overlayView setFrame:self.cameraController.view.bounds];
+	[self.cameraController setCameraOverlayView:ar_overlayView];
+    
+    UIButton * backHome = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    [backHome setTitle:@"back home" forState:UIControlStateNormal];
+    [backHome setBackgroundColor:[UIColor grayColor]];
+    [backHome addTarget:self action:@selector(goHome) forControlEvents:UIControlEventTouchUpInside];
+    [ar_overlayView addSubview:backHome];
+    UIView * status = [[UIView alloc] initWithFrame:CGRectMake(0, 40,320,40)];
+    [status setBackgroundColor:[UIColor colorWithWhite:0.250 alpha:1.000]];
+    [ar_overlayView addSubview:status];
+    [self setStatusIndicator:status];
+    [self setStatus:@"Loading..."];
+    [backHome release];    
+
 	
 	if (!_updateTimer) {
 		_updateTimer = [[NSTimer scheduledTimerWithTimeInterval:self.updateFrequency
@@ -428,8 +456,13 @@ NSComparisonResult LocationSortClosestFirst(ARCoordinate *s1, ARCoordinate *s2, 
 												   userInfo:nil
 													repeats:YES] retain];
 	}
+    
 	
-	[super viewDidAppear:animated];
+}
+
+- (void) goHome {
+    [[self navigationController] dismissModalViewControllerAnimated:NO];
+    [[self navigationController] popToRootViewControllerAnimated:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

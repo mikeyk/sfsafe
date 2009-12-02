@@ -40,6 +40,8 @@
 	
 	BOOL rotateViewsBasedOnPerspective;
 	double maximumRotationAngle;
+    
+    UIView * statusIndicator;    
 	
 @private
 	BOOL ar_debugMode;
@@ -82,6 +84,8 @@
 
 - (id)initWithLocationManager:(CLLocationManager *)manager;
 
+- (void) setStatus:(NSString *) status;
+
 - (void)startListening;
 - (void)updateLocations:(NSTimer *)timer;
 
@@ -99,5 +103,7 @@
 
 @property (nonatomic, retain) UIAccelerometer *accelerometerManager;
 @property (nonatomic, retain) CLLocationManager *locationManager;
+
+@property (nonatomic, retain) UIView * statusIndicator;
 
 @end
