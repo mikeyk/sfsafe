@@ -18,19 +18,16 @@
 
 - (id)initWithDataSource:(id<InfoLocationDataSource>) dataSource_ center: (CLLocation *) center {    
     if (self = [super init]) {
+        NSLog(@"init with datasource");
         [self setDelegate:self];
         [self setCenterLocation:center];
         
         [self setScaleViewsBasedOnDistance:YES];
         [self setMinimumScaleFactor:0.5];
         
-        MKCoordinateRegion region;
-        region.center = [center coordinate];
-        region.span.latitudeDelta = (0.1 / 69);
-        region.span.longitudeDelta = (0.1 / 69);
+        
         [self setDataSource:dataSource_];
         [dataSource setDelegate:self];
-        [dataSource updateResultsForRegion:region];
         //[self setStatus:@"Loading..."];
         NSMutableArray * newArr = [[NSMutableArray alloc] initWithCapacity:25];
         [self setCoordinates:newArr];
@@ -77,9 +74,14 @@
 
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-    [self startListening];    
+    [self startListening];
+    NSLog(@"the view, it id apppear");
+    [super viewDidAppear:NO]; 
+    MKCoordinateRegion region;
+    region.center = [centerLocation coordinate];
+    region.span.latitudeDelta = (0.1 / 69);
+    region.span.longitudeDelta = (0.1 / 69);
+    [dataSource updateResultsForRegion:region];    
 }
 
 
