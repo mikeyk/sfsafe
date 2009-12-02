@@ -40,8 +40,8 @@
             [delegate networkError];
         }
     } else {
-        if([response valueForKey:@"num_results"] == 0){
-            // TODO handle no results
+        if([[response valueForKey:@"num_results"] intValue] == 0){
+            [self performSelectorOnMainThread:@selector(receivedResults) withObject:nil waitUntilDone:NO];
         }
         else if([response valueForKey:@"latitude_delta"] && [response valueForKey:@"longitude_delta"] 
                 && [response objectForKey:@"result_set"]) {
