@@ -47,6 +47,23 @@
     return locationManager;
 }
 
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    if (error.code == kCLErrorDenied) {
+        [[self locationManager] stopUpdatingLocation];        
+        if (![self receivedOneGoodLocation]) {
+            [self setReceivedOneGoodLocation:YES];            
+            if (![self shouldCorrectLocation]) {
+                [delegate performSelector:onError withObject:@"Please restart the application and allow CrimeDeskSF to see your location to use the augmented reality view."];               
+            } else {
+                [self setReceivedOneGoodLocation:YES];
+                CLLocation * loc = [[CLLocation alloc] initWithLatitude:CITYCENTERLAT longitude:CITYCENTERLON];
+                [delegate performSelector:callback withObject:loc];
+            }
+        }
+    }
+    
+}
+
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation {
@@ -84,7 +101,6 @@
         }
     }
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
